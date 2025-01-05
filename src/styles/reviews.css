@@ -1,0 +1,216 @@
+
+.reviews {
+  color: white;
+  text-align: center;
+  margin: 2rem auto;
+  padding-top: 0; /* Remove top padding */
+  position: relative;
+  width: auto;
+  height: 100vh; /* Full viewport height */
+  display: flex;
+  flex-direction: column; /* Stack items vertically */
+  justify-content: flex-start; /* Start at the top */
+  align-items: center;
+  overflow: hidden;
+  font-weight: bold;
+}
+
+.review-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Maintain aspect ratio, fill */
+  filter: brightness(30%);
+  z-index: -1; /* Ensure the image stays behind other content */
+}
+
+.review-intro {
+  width: 100%;
+  text-align: left;
+  padding: 2rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  color: white;
+  padding-left: 2rem; /* Adjust padding as needed */
+  margin-bottom: 2rem;
+  justify-content: space-between;
+  }
+  
+  .review-intro h1 {
+    font-size: 1.2rem; /* Adjust as needed */
+    margin-bottom: 1rem;
+    padding-left: 2rem;
+  }
+  
+  .review-intro p {
+    font-size: 3rem; /* Adjust as needed */
+    margin-bottom: 1rem;
+    display: flex; /* Flexbox for positioning line and button */
+    align-items: center;
+    flex-wrap: nowrap;
+    font-size: 3.1rem; /* Adjust font size as needed */
+    margin-bottom: 1rem;
+    position: relative;
+    display: inline-block; /* Prevent wrapping */
+  }
+  
+  .review-intro p::after {
+    content: "";
+    position: absolute;
+    top: 50%; /* Center the line vertically */
+    left: 100%; 
+    width: 24rem; /* Adjust width as needed */
+    height: 1px; /* Height of the line */
+    background-color: rgb(164, 0, 0);
+    margin-left: 15px;
+    flex-grow: 1;
+    margin-left: 1rem; /* Space between text and line */
+    height: 2px; /* Height of the line */
+    background-color: rgb(164, 0, 0);
+  }
+  
+  .reviewbtn {
+    background-color: white; /* Button background */
+    color: black; /* Button text color */
+    font-weight: bold;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 4px; /* Rounded corners */
+    transition: transform 0.3s ease; /* Smooth transition for scaling */
+    position: relative; /* Relative to its containing block */
+    top: -70px; /* Move the button up */
+    left: 40rem; /* Move the button to the right */
+  }
+  
+  .reviewbtn:hover {
+    transform: scale(1.1); /* Scale the button to 110% on hover */
+  }
+
+  
+  .review-slides {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+    margin-top: 2rem;
+    transform: translateY(-50px); /* Move the review part up */
+  }
+  
+  .review-box {
+    background-color: #fff;
+    padding: 2rem;
+    margin: 0 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+  }
+
+  .review-box p {
+    color: black;
+  }
+  
+  .stars {
+    color: yellow;
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .arrow {
+    background: rgb(164, 0, 0);
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    color: white; /* Change arrow color to red */
+    transition: color 0.3s;
+    outline: none; /* Remove default outline */
+  }
+  
+  .arrow:focus {
+    outline: 3px solid rgb(164, 0, 0); /* Custom red outline */
+  }
+  
+  
+  .left-arrow {
+    position: absolute;
+    left: 0;
+  }
+  
+  .right-arrow {
+    position: absolute;
+    right: 0;
+  }
+
+.leavereviewbox {
+    display: flex;
+    justify-content: center;
+    height: 28%;
+    width: auto;
+    padding: 20px;
+    background-color: black;
+    align-content: center;
+    box-sizing: border-box; /* Ensure padding and border are included in the element's total width and height */
+    border: 2px solid white; /* Add the white border here */
+}
+
+.review-container {
+    align-content: center;
+}
+
+.facebook-review {
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+}
+
+.facebook-link { 
+  text-decoration: none; 
+  color: inherit; 
+  display: flex; 
+  align-items: center; 
+}
+
+.reviewfacebook-logo {
+  margin-top: 2rem;
+    height: 50px;
+}
+
+.review-call-to-action {
+  text-decoration: none; 
+  color: inherit; /* Ensure the link takes the color of its parent */
+  margin-top: 2rem;
+  width: 80%;
+  height: 3.2rem;
+  align-content: center;
+  background-color: rgb(164, 0, 0);
+}
+
+.review-call-to-action a {
+  text-decoration: none; /* Remove the underline from the link */
+  color: inherit; /* Ensure the link takes the color of its parent */
+  display: block; /* Ensure the link covers the whole area */
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+}
+
+.review-call-to-action p { 
+  margin: 0; 
+  font-size: 18px; 
+  font-weight: bold; 
+  cursor: pointer; 
+  color: white; /* Ensure the text color remains consistent */
+  transition: color 0.3s;
+  display: flex; /* Flexbox for centering */
+  align-items: center; /* Center vertically */
+  justify-content: center; /* Center horizontally */
+  height: 100%; /* Full height of the container */
+}
+
+
+
+  
+  

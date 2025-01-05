@@ -1,0 +1,35 @@
+/* header2.css */
+.header2 {
+    position: fixed; /* Fixed position */
+    top: 0; /* Aligns the header to the top of the viewport */
+    width: 100%; /* Ensures the header spans the entire width */
+    z-index: 1000; /* Ensures the header stays above other content */
+    padding: 20px 0;
+    height:7rem;
+    transition: background-color 0.3s, padding 0.3s;
+    background-color: transparent; /* Ensure transparency */
+  }
+  
+  .header2-default {
+    background-color: transparent;
+    padding: 20px 0;
+  }
+  
+  .header2-scrolled {
+    border-bottom: 2px solid red;
+    background-color: white;
+    padding: 10px 0;
+  }
+  
+  .header2-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+
+  
+  
+  
+  
+  

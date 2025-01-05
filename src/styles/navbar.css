@@ -1,0 +1,48 @@
+/* Default link styles */
+.nav-link {
+  color: inherit; /* Inherit color from header */
+  text-decoration: none; /* Remove underline */
+  transition: color 0.3s; /* Smooth transition */
+  height: 3.2rem;
+}
+
+/* Hover styles */
+.nav-link:hover {
+    z-index: 2000;
+  color: rgb(164, 0, 0);
+  cursor: pointer;
+}
+
+/* Navbar styles */
+.navbar {
+  display: flex;
+  justify-content: center; /* Center the .ul container */
+  align-items: center;
+  width: 100%;
+}
+
+.navbar ul {
+  list-style: none; /* Remove default list styling */
+  margin: 0 auto; /* Center the ul itself */
+  padding: 0; /* Remove default padding */
+  display: flex; /* Use flexbox for the list */
+  justify-content: center; /* Center the nav items */
+  align-items: center;
+}
+
+.nav-item {
+  margin-left: 12px; /* Ensure no right margin */
+  padding: 0; /* Remove padding if needed */
+}
+
+.nav-item-scrolled {
+  color: black;
+}
+
+
+
+
+
+
+  
+  

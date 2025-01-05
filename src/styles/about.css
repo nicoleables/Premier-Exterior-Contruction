@@ -1,0 +1,139 @@
+.about {
+  display: flex;
+  flex-direction: column; /* Stack symbols and content vertically */
+  background-color: black;
+  color: white;
+  overflow: hidden;
+  padding: 2rem;
+  box-sizing: border-box;
+  height: 120vh; /* Adjust height as needed to make the section taller */
+}
+
+.about-symbols {
+  display: flex;
+  justify-content: center; /* Center symbols horizontally */
+  align-items: center;
+  width: 100%;
+  padding: 1rem 0; /* Add padding for spacing */
+  box-sizing: border-box;
+}
+
+.symbol-item {
+  display: flex;
+  align-items: center;
+  margin-right: 5rem;
+}
+
+.symbol-image {
+  width: 40px;
+  height: auto;
+  margin-right: 0.5rem;
+}
+
+.symbol-text {
+  font-size: 1rem;
+}
+
+.content-container {
+  display: flex;
+  justify-content: space-between; /* Align text and image side by side */
+  width: 100%;
+  margin-top: 3rem;
+}
+
+.about-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 30%; /* Adjust width as needed */
+  height: 100%; /* Make content fill the height */
+}
+
+.about-content h1 {
+  font-size: 50px;
+  font-weight: bold;
+  line-height: 1.5;
+}
+
+.about-content p {
+  width: 40%;
+  height: 100%;
+  flex-grow: 1;
+  line-height: 2; /* Increase line-height for better readability */
+}
+
+
+.facebooklogo {
+  margin-top: 2rem;
+  height: 80px;
+  width: 80px;
+}
+
+.facebooklogo:hover {
+  transform: scale(1.1);
+}
+
+.about-pic {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 45%; /* Ensure the image stays on the right */
+}
+
+.aboutpic {
+  width: 100%;
+  height: 100%; /* Make the image fill the height */
+  object-fit: cover;
+  border-radius: 1px;
+}
+
+
+@media (max-width: 1200px) {
+  .about-content {
+    width: 65%;
+  }
+  
+  .about-pic {
+    width: 55%;
+  }
+}
+
+@media (max-width: 992px) {
+  .about-content p {
+    width: 40%;
+  }
+  
+  .about-pic {
+    width: 50%;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-content {
+    width: 20%;
+  }
+  
+  .about-pic {
+    width: 60%;
+  }
+}
+
+@media (max-width: 576px) {
+  .content-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .about-content, .about-pic {
+    width: 100%;
+  }
+  
+  .aboutpic {
+    height: auto; /* Ensure image height adjusts to width */
+  }
+}
+
+
+
+  
+  

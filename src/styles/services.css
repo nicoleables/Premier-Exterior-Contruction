@@ -1,0 +1,92 @@
+.service {
+  background-color: black;
+  color: white;
+  margin-bottom: 4rem;
+}
+
+.service h1 {
+  margin-left: 2rem;
+  font-size: 20px;
+}
+
+.service p {
+  margin-left: 2rem;
+  font-size: 50px;
+  font-weight: bold;
+  position: relative; /* Position relative to its containing block */
+  display: inline-block; /* Make p an inline-block to control the width */
+}
+
+.service p::after {
+  content: "";
+  position: absolute;
+  top: 50%; /* Center the line vertically */
+  left: 100%; /* Position the line after the p text */
+  transform: translateY(-50%);
+  width: 550px; /* Adjust width as needed */
+  height: 1px; /* Height of the line */
+  background-color: rgb(164, 0, 0);
+  margin-left: 15px; /* Space between text and line */
+}
+
+.icons { 
+  width: 100%; 
+  height: 100%; 
+  display: block; 
+  object-fit: cover; /* Ensure images cover the grid cells */ 
+  transition: transform 0.3s; /* Smooth transition for transform */ 
+}
+
+.service ul {
+  list-style: none; 
+  display: grid; 
+  grid-template-columns: 1fr 1fr; 
+  grid-template-rows: repeat(4, 1fr); 
+  gap: 0; 
+  margin: 0 auto; 
+  padding: 0; 
+  max-width: 840px; /* Ensure the grid takes the full width */
+  height: 150vh;
+  justify-content: center; /* Center the grid in the container */
+}
+
+.service li {
+  position: relative; /* Set position relative for absolute positioning of h2 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%; 
+  overflow: hidden;
+}
+
+.service li h2 {
+  position: absolute; /* Position h2 absolutely */
+  top: 85%; /* Position it in the vertical center */
+  left: 50%; /* Position it in the horizontal center */
+  transform: translate(-50%, -50%); /* Translate it back by half its width and height to center it */
+  text-align: center; /* Center the text */
+  background-color: black; /* Set background color to black */
+  color: white; /* Set text color to white for contrast */
+  padding: 8px; /* Add some padding for better appearance */
+  margin: 0; /* Remove default margin */
+  width: auto; /* Set width to auto to fit the text */
+  border: 2px solid rgb(164, 0, 0); /* Add a red outline */
+  box-sizing: border-box; 
+  transition: transform 0.3s; /* Smooth transition for transform */
+  z-index: 1; /* Ensure the text is above the image */
+}
+
+.service h2 {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+
+.service h2:hover {
+  cursor: pointer;
+  font-size: 40px;
+}
+
+
+

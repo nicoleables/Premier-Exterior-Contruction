@@ -1,0 +1,167 @@
+.project {
+  color: white;
+  background-color: black;
+  margin-bottom: 5rem;
+  
+}
+
+.projects-intro {
+  width: 100%;
+  height: 80%;
+  text-align: left;
+  padding: 2rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  background-color: black;
+  color: white;
+  padding-left: 0;
+}
+
+.projects-intro h1 {
+  font-size: 1.2rem; /* Adjust as needed */
+  margin-bottom: 1rem;
+  padding-left: 2rem;
+}
+
+.projects-intro p {
+  padding-left: 2rem;
+  font-size: 3rem; /* Adjust as needed */
+  margin-bottom: 1rem;
+  display: flex; /* Flexbox for positioning line and button */
+  align-items: center;
+  flex-wrap: nowrap;
+  font-size: 3.1rem; /* Adjust font size as needed */
+  margin-bottom: 1rem;
+  position: relative;
+  display: inline-block; /* Prevent wrapping */
+}
+
+.projects-intro p::after {
+  content: "";
+  position: absolute;
+  top: 50%; /* Center the line vertically */
+  left: 100%; 
+  width: 160px; /* Adjust width as needed */
+  height: 1px; /* Height of the line */
+  background-color: rgb(164, 0, 0);
+  margin-left: 15px;
+  flex-grow: 1;
+  margin-left: 1rem; /* Space between text and line */
+  height: 2px; /* Height of the line */
+  background-color: rgb(164, 0, 0);
+}
+
+.projectbtn {
+  background-color: white; /* Button background */
+  color: black; /* Button text color */
+  font-weight: bold;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 4px; /* Rounded corners */
+  transition: transform 0.3s ease; /* Smooth transition for scaling */
+  position: relative; /* Relative to its containing block */
+  top: -70px; /* Move the button up */
+  left: 38rem; /* Move the button to the right */
+}
+
+.projectbtn:hover {
+  transform: scale(1.1); /* Scale the button to 110% on hover */
+}
+
+.project-container {
+  display: flex;
+  justify-content: center; /* Center the container horizontally */
+  align-items: center;
+  width: 100%;
+}
+
+.projecticons {
+  width: 230px;
+  height: 220px;
+  align-content: center;
+}
+
+.project-container ul {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Three columns */
+  grid-template-rows: auto auto auto; /* Three rows */
+  grid-template-areas: 
+    "item1 item2 item3"
+    "item4 item5 item5"
+    "item6 item7 item8"; /* Define specific areas for each item */
+  gap: 20px; /* Space between items */
+  margin: 0 auto;
+  text-align: center;
+  width: 100%;
+  max-width: 960px; /* Adjust as needed to fit your layout */
+}
+
+.project-container li:nth-child(1) { grid-area: item1; }
+.project-container li:nth-child(2) { grid-area: item2; }
+.project-container li:nth-child(3) { grid-area: item3; }
+.project-container li:nth-child(4) { grid-area: item4; }
+.project-container li:nth-child(5) { grid-area: item5; }
+.project-container li:nth-child(6) { grid-area: item6; }
+.project-container li:nth-child(7) { grid-area: item7; }
+.project-container li:nth-child(8) { grid-area: item8; }
+
+.project-container li {
+  position: relative; /* Set position relative for absolute positioning of h2 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.project-container {
+  display: flex;
+  justify-content: center; /* Center the container horizontally */
+  align-items: center;
+  width: 100%;
+}
+
+.projecticons {
+  width: 230px;
+  height: 220px;
+  align-content: center;
+}
+
+.project-container ul {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Three columns */
+  grid-template-rows: auto auto auto; /* Three rows */
+  gap: 20px; /* Space between items */
+  margin: 0 auto;
+  text-align: center;
+  width: 100%;
+  max-width: 960px; /* Adjust as needed to fit your layout */
+}
+
+.project-container li:nth-child(1) { grid-column: 1 / 2; }
+.project-container li:nth-child(2) { grid-column: 2 / 3; }
+.project-container li:nth-child(3) { grid-column: 3 / 4; }
+.project-container li:nth-child(4) { grid-column: 1 / 2; }
+.project-container li:nth-child(5) { grid-column: 3 / 4; }
+.project-container li:nth-child(6) { grid-column: 1 / 2; }
+.project-container li:nth-child(7) { grid-column: 2 / 3; }
+.project-container li:nth-child(8) { grid-column: 3 / 4; }
+
+.project-container li {
+  position: relative; /* Set position relative for absolute positioning of h2 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.project-container li:nth-child(4) {
+  margin-left: calc(57% - 2px); /* Center within the middle row, adjusted for image width */
+}
+
+.project-container li:nth-child(5) {
+  margin-left: calc(1% - 9rem); /* Center within the middle row, adjusted for image width */
+}

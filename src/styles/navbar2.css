@@ -1,0 +1,30 @@
+/* navbar.css */
+.navbar2 {
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px;
+  }
+  
+  .navbar2 ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .nav-item2 {
+    margin-left: 20px;
+  }
+  
+  .nav-link2 {
+    text-decoration: none;
+    color: black;
+    transition: color 0.3s;
+    cursor: pointer; /* Make sure it's clear that these are clickable links */
+  }
+  
+  .nav-link2:hover {
+    color: rgb(164, 0, 0);
+}
+  
+ 

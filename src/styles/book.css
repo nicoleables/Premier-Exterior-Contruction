@@ -1,0 +1,198 @@
+.book {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Full viewport height */
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    background-color: black;
+  }
+  
+  .book-image {
+    position: absolute;
+    width: 100%;
+    height: 50%;
+    margin-top: -25rem;
+    object-fit: cover; 
+    filter: brightness(70%);
+  }
+  
+  .booktext {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+
+  }
+  
+  .book-text-container {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items horizontally */
+    text-align: center;
+    margin-bottom: 20rem; /* Use negative value to move it closer */
+  }
+  
+  .book-text h1 {
+    color: white;
+    font-weight: bold;
+    font-size: 50px; /* Adjust font size as needed */
+    padding: 5rem;
+  }
+  
+  .bookquote {
+    margin-top: -4.5rem; /* Use negative value to move it closer */
+  }
+  
+  .bookquote .textbtn {
+    background-color: white;
+    color: black;
+    border: none;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: center; /* Center text within the button */
+    transition: transform 0.3s ease; /* Smooth transition for scaling */
+  }
+  
+  .bookquote .textbtn:hover {
+    transform: scale(1.1); /* Scale the button to 110% on hover */
+    cursor: pointer; /* Change cursor to pointer */
+  }  
+  
+  
+  .quote-section p {
+    font-size: 1.25rem; /* Adjust font size as needed */
+    margin-bottom: 1rem;
+  }
+  
+  .quote-section span {
+    display: block;
+    margin-bottom: 0.5rem;
+  }
+  
+  .quote-section {
+    width: 100%;
+    text-align: left;
+    padding: 2rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: black;
+    color: white;
+    padding-left: 2rem;
+    margin-top: 28rem;
+  }
+  
+  .quote-section h2 {
+    font-size: 3.1rem; /* Adjust font size as needed */
+    margin-bottom: 1rem;
+    position: relative;
+    display: inline-block; /* Make the h2 an inline-block to control the width */
+  }
+  
+  .quote-section h2::after {
+    content: "";
+    position: absolute;
+    top: 50%; /* Center the line vertically */
+    left: 100%; /* Position the line after the h2 text */
+    transform: translateY(-50%);
+    width: 550px; /* Adjust width as needed */
+    height: 1px; /* Height of the line */
+    background-color: rgb(164, 0, 0);
+    margin-left: 15px; /* Space between text and line */
+  }
+  
+  .quote-section p {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+  }
+  
+  .quote-box-container {
+    display: flex;
+    justify-content: center; /* Center items horizontally */
+    align-items: center; /* Center items vertically */
+    gap: 3rem; /* Space between each box */
+    font-size: 20px;
+    font-weight: bold;
+    width: 100%; /* Ensure the container takes full width */
+    margin-top: 2rem;
+  }
+  
+  
+  .quote-box {
+    text-align: center;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: center;
+}
+
+.red-box {
+    height: 10rem;
+    background-color: rgb(164, 0, 0);
+    color: white;
+    display: flex; /* Enable Flexbox */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    position: relative; /* Needed for positioning the arrow */
+    
+}
+
+.red-box::after {
+    content: '';
+    position: absolute;
+    right: -19px; /* Adjust this value to move the arrow further out */
+    top: 10; /* Aligns the arrow with the top of the box */
+    height: 100%; /* Makes the arrow the same height as the box */
+    width: 18.9px; /* Adjust the width of the arrow */
+    background-color: rgb(164, 0, 0); /* Arrow color */
+    clip-path: polygon(0 0, 100% 50%, 0 100%); /* Creates a triangular arrow shape */
+}
+
+.white-box {
+    height: 10rem;
+    background-color: white;
+    color: black;
+    display: flex; /* Enable Flexbox */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    position: relative; /* Needed for positioning the arrow */
+}
+
+.white-box::after {
+    content: '';
+    position: absolute;
+    right: -18.4px; /* Adjust this value to move the arrow further out */
+    top: 0; /* Aligns the arrow with the top of the box */
+    height: 100%; /* Makes the arrow the same height as the box */
+    width: 18.6px; /* Adjust the width of the arrow */
+    background-color: white; /* Arrow color */
+    clip-path: polygon(0 0, 100% 50%, 0 100%); /* Creates a triangular arrow shape */
+}
+  
+  .textbtn  {
+    background-color: white; /* Ensure button matches the red box */
+    color: black;
+    border: none;
+    padding: 0.5rem 1rem;
+    font-size: 1rem; /* Corrected font size */
+    font-weight: bold;
+    text-align: center; /* Center text within the button */
+    transition: transform 0.3s ease; /* Smooth transition for scaling */
+  }
+  
+  .textbtn:hover {
+    transform: scale(1.1); /* Scale the button to 110% on hover */
+    cursor: pointer; /* Change cursor to pointer */
+  }
+  
+  
+  
