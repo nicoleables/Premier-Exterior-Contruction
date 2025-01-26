@@ -27,7 +27,8 @@
   z-index: 1;
   color: white;
   text-align: left; /* Align text to the left */
-  padding-left: 2rem; /* Add padding to the left */
+  padding-left: .5rem; /* Add padding to the left */
+  padding-right: 1rem;
   height: 100%; /* Ensure the container takes full height */
   box-sizing: border-box; /* Include padding in element's total width */
 }
