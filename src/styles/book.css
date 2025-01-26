@@ -205,6 +205,7 @@
     }
     
     .quote-section {
+      margin-right: -2rem;
       margin-bottom: 8rem;
       position: relative; /* Ensure the section is positioned relative to its parent container */
     }
