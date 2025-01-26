@@ -1,9 +1,12 @@
+/* General Footer Styles */
 .footer {
   background-color: black;
   color: white;
   padding: 2rem;
-  height: 100vh;
-  display: flex; flex-direction: column; box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  min-height: 100vh; /* Ensure full viewport height */
 }
 
 .footerintro {
@@ -42,9 +45,10 @@
   font-size: 19px;
 }
 
+/* Footer Box Container */
 .footer-box-container {
   width: 90%;
-  height: 70px;
+  height: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -74,13 +78,13 @@
   background-color: white;
   color: black;
   font-weight: bold;
-  border: 3px solid black; /* Thicker border */
+  border: 3px solid black;
   padding: 0.5rem 2rem;
   margin-top: -4px;
 }
 
 .footerbtn:hover {
-  transform: scale(1.1); /* Scale the button to 110% on hover */
+  transform: scale(1.1);
 }
 
 .facebook-logofooter {
@@ -97,35 +101,26 @@
 }
 
 .facebooklogofooter:hover {
-  transform: scale(1.1); /* Scale the button to 110% on hover */
+  transform: scale(1.1);
 }
 
+/* Footer Information Section */
 .footerinfo {
   display: flex;
-  justify-content: space-evenly; /* Evenly space out sections */
+  justify-content: space-evenly;
   padding-top: 2rem;
-  padding-left: 3rem;
-  padding-right: 8rem;
-  width: 110%; /* Ensure the container takes full width */
-  text-align: center; /* Center text within sections */
-  margin: 0 auto; 
-  margin-bottom: 2rem;/* Center the footer info within the page */
+  width: 100%;
+  text-align: center;
+  flex-grow: 1; /* Ensure it takes available space */
 }
 
 .footerinfo div {
   margin-top: 1.1rem;
   text-align: center;
-  flex: 1; /* Ensure equal space for all columns */
+  flex: 1;
 }
 
-.hours h2 {
-  width: 14.5rem;
-}
-
-.hours span {
-  width: 14.5rem;
-}
-
+.hours h2, .hours span,
 .company, .services, .areas, .hours {
   width: 14.5rem;
   display: flex;
@@ -135,36 +130,131 @@
 .company h2, .services h2, .areas h2, .hours h2 {
   font-size: 1.5rem;
   margin-bottom: 1rem;
+
+}
+
+.services h2, .services span {
+  padding-right: 4rem
+}
+
+.areas h2, .areas span {
+  padding-right: 5.8rem
+}
+
+.hours h2, .hours span {
+  padding-right: 1rem;
+  width: 100%;
 }
 
 .footer span {
   padding-top: .5rem;
 }
 
-
-
-.red-line {
-  width: 100%;
-  height: 2px;
-  margin: 1rem 0; /* Add some space above and below the line */
-  background-color: red;
+/* Red Line */
+.red-line { 
+  width: 100%; 
+  height: 2px; 
+  margin: 1rem 0; 
+  background-color: red; 
 }
 
-.footer-bottom {
-  background-color: black;
-  color: white;
-  padding: 1rem 0;
-  width: 100%;
-  display: flex; /* Use flexbox for alignment */
-  justify-content: center; /* Center the content horizontally */
-  align-items: center; /* Center the content vertically */
-  box-sizing: border-box; /* Include padding and border in the element's total width and height */
-  margin-top: rem; /* Add margin to push the footer content further down */
+/* Footer Bottom Section */
+.footer-bottom { 
+  background-color: black; 
+  color: white; 
+  padding: 1rem 0; 
+  width: 100%; 
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
+  box-sizing: border-box; 
+  margin-top: auto; /* Push the footer bottom to the end */
 }
 
 .bottom-middle {
   margin-top: .7rem;
-  text-align: center; /* Center the text within the div */
+  text-align: center;
+}
+
+/* Media Queries for Smaller Screens */
+
+
+@media (max-width: 480px) {
+  .footer {
+    padding: 0.5rem;
+  }
+
+  .footerintro {
+    padding-bottom: 0.5rem;
+  }
+
+  .logo-img {
+    height: 60px;
+  }
+
+  .footerheading h1 {
+    font-size: 18px;
+  }
+
+  .footerheading p {
+    font-size: 15px;
+  }
+
+  .footer-box-container {
+    padding: 0.5rem;
+  }
+
+  .footerbtn {
+    margin-top: .1rem;
+    font-size: 14px;
+    padding: 0.5rem 1rem;
+  }
+
+  .facebooklogofooter {
+    height: 40px;
+    width: 40px;
+  }
+
+  .footerinfo {
+    padding-top: 0.5rem;
+    padding-left: -1rem;
+  }
+
+  .footerinfo h2 {
+    font-size: .8rem;
+  }
+
+  .footer span {
+    padding-top: .25rem;
+    font-size: 9px;
+  }
+
+  .company h2, .services h2, .areas h2, .hours h2 {
+    margin-bottom: 1rem;
+  
+  }
+  
+  .services h2, .services span {
+    padding-right: 1rem;
+  }
+  
+  .areas h2, .areas span {
+    padding-right: 5rem;
+    width: 120%;
+  }
+  
+  .hours h2, .hours span {
+    padding-left: 1rem;
+    width: 100%;
+  }
+  
+  .footer span {
+    padding-top: .5rem;
+  }
+}
+
+.hours {
+  margin-left: -3rem;
 }
 
 
