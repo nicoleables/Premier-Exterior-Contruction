@@ -6,14 +6,18 @@
   overflow: hidden;
   padding: 2rem;
   box-sizing: border-box;
-  height: 125vh; 
-  margin-top: 4rem;/* Adjust height as needed to make the section taller */
+  height: auto; 
+  margin-top: 4rem; /* Adjust height as needed to make the section taller */
+  align-items: center; /* Center content horizontally */
+  text-align: center; /* Center text content */
+  margin-bottom: 4rem;
 }
 
 .about-symbols {
   display: flex;
   justify-content: center; /* Center symbols horizontally */
   align-items: center;
+  flex-wrap: nowrap; /* Keep symbols side-by-side */
   width: 100%;
   padding: 1rem 0; /* Add padding for spacing */
   box-sizing: border-box;
@@ -22,7 +26,10 @@
 .symbol-item {
   display: flex;
   align-items: center;
-  margin-right: 5rem;
+  justify-content: center; /* Center content within the item */
+  margin: 0 1rem; /* Use margin for spacing */
+  width: auto; /* Adjust width as needed */
+  text-align: center;
 }
 
 .symbol-image {
@@ -40,6 +47,7 @@
   justify-content: space-between; /* Align text and image side by side */
   width: 100%;
   margin-top: 3rem;
+  align-items: center; /* Center content vertically */
 }
 
 .about-content {
@@ -48,6 +56,7 @@
   justify-content: flex-start;
   width: 30%; /* Adjust width as needed */
   height: 100%; /* Make content fill the height */
+  text-align: left; /* Align text to the left */
 }
 
 .about-content h1 {
@@ -57,101 +66,119 @@
 }
 
 .about-content p {
-  width: 65%;
-  height: 100%;
+  width: 100%; /* Full width for consistency */
   flex-grow: 1;
   line-height: 2; /* Increase line-height for better readability */
 }
 
+.aboutpic {
+  height: 30rem;
+  width: auto;
+}
 
-.facebooklogo {
+.about-pic {
+  top: 2rem;
+  justify-content: flex-end;
+  align-items: center;
+  width: 50%; /* Ensure the image stays on the right */
+  margin-right: 2rem;
+}
+
+.aboutfacebooklogo {
   margin-top: 2rem;
   height: 80px;
   width: 80px;
 }
 
-.facebooklogo:hover {
+.aboutfacebooklogo:hover {
   transform: scale(1.1);
 }
 
-.about-pic {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  width: 55%; /* Ensure the image stays on the right */
-}
-
-.aboutpic {
-  width: 100%;
-  height: 100%; /* Make the image fill the height */
-  object-fit: cover;
-  border-radius: 1px;
-}
-
-
-@media (max-width: 480px) {
+@media (max-width: 768px) {
   .about-symbols {
-    display: flex;
-    justify-content: center; /* Center symbols horizontally */
-    align-items: center;
-    width: 5%;
-    padding: .25rem 0; /* Add padding for spacing */
-    box-sizing: border-box;
-    margin-left: 11rem;
-  }
-
-  .symbol-text {
-    font-size: .8em;
-  }
-
-  .symbol-image {
-    height: 40px;
-    width: auto;
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
   }
 
   .symbol-item {
-    margin-right: 2rem;
-    align-items: center;
+    margin: 0.5rem; /* Adjust margin for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .about-symbols {
+    flex-direction: row; /* Ensure horizontal alignment */
+    justify-content: center; /* Center symbols horizontally */
+    align-items: center; /* Center symbols vertically */
   }
 
-  .about h1 {
+  .symbol-item {
+    margin: 0.5rem; /* Adjust margin for smaller screens */
+    width: auto; /* Ensure width is responsive */
+  }
+
+  .symbol-text {
+    font-size: 0.8rem; /* Adjust font size for smaller screens */
+  }
+
+  .symbol-image {
+    width: 30px; /* Adjust image size for smaller screens */
+  }
+
+  .content-container {
+    flex-direction: column; /* Stack text and image vertically */
+    align-items: center; /* Center content horizontally */
+    width: 100%;
+  }
+
+  .about-content {
+    width: 90%; /* Adjust width for responsiveness */
+    max-width: 480px; /* Prevent overflow */
+    text-align: center; /* Center text */
+  }
+
+  .about-content h1 {
     font-size: 30px;
-    width: 21rem;
+    width: 90%; /* Use percentage for responsive width */
     text-align: center;
+    max-width: 350px;
+    margin: 0 auto; /* Center the element */
   }
 
-  .about p {
+  .about-content p {
     text-align: center;
-    margin-left: 1.5rem;
+    margin: 0 auto;
     font-size: 15px;
-    width: 18rem;
+    width: 90%; /* Use percentage for responsive width */
+    max-width: 340px;
+    margin-bottom: 2rem;
   }
 
   .aboutpic {
-    margin-top: 22rem;
+    margin-top: -2rem; /* Further reduce top margin */
     height: auto;
-    width: 22rem;
-    margin-right: -.2rem;
-    padding: 0.8rem;
+    width: 150%; /* Use percentage for responsive width */
+    max-width: 700px; /* Add max-width to prevent overflow */
+    padding: 0.5rem; /* Adjust padding */
+    margin-bottom: -1rem; /* Further reduce bottom margin */
+    margin: 0 auto; /* Center the image */
+    object-fit: cover; /* Maintain image aspect ratio */
+    margin-left: -18%
   }
 
-  .about  {
+  .about {
     text-align: center;
-    margin-top: 3rem;
-    height: 60rem;
+    margin-top: 0.5rem; /* Further reduce top margin */
+    height: auto; /* Adjust height for responsiveness */
     font-size: 14px;
     padding: 0.5rem 1rem;
+    align-items: center; /* Center content horizontally */
   }
 
-  .facebooklogo {
-    align-items: center;
-    margin-left: 8rem;
+  .aboutfacebooklogo {
+    margin: -42rem auto; /* Further reduce space between elements */
     position: relative;
-    top: 8rem; /* Adjust top for exact spacing */
+    margin-top: -3rem; /* Move up the Facebook logo further */
   }
-  
-
-  
 }
 
 
