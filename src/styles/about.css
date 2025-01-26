@@ -178,10 +178,10 @@
     margin: -42rem auto; /* Further reduce space between elements */
     position: relative;
     margin-top: -3rem; /* Move up the Facebook logo further */
+    height: 40px;
+    width: 40px;
   }
 }
-
-
 
   
   
