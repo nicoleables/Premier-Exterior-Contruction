@@ -6,7 +6,8 @@
   overflow: hidden;
   padding: 2rem;
   box-sizing: border-box;
-  height: 120vh; /* Adjust height as needed to make the section taller */
+  height: 125vh; 
+  margin-top: 4rem;/* Adjust height as needed to make the section taller */
 }
 
 .about-symbols {
@@ -56,7 +57,7 @@
 }
 
 .about-content p {
-  width: 40%;
+  width: 65%;
   height: 100%;
   flex-grow: 1;
   line-height: 2; /* Increase line-height for better readability */
@@ -77,7 +78,7 @@
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  width: 45%; /* Ensure the image stays on the right */
+  width: 55%; /* Ensure the image stays on the right */
 }
 
 .aboutpic {
@@ -88,49 +89,69 @@
 }
 
 
-@media (max-width: 1200px) {
-  .about-content {
-    width: 65%;
+@media (max-width: 480px) {
+  .about-symbols {
+    display: flex;
+    justify-content: center; /* Center symbols horizontally */
+    align-items: center;
+    width: 5%;
+    padding: .25rem 0; /* Add padding for spacing */
+    box-sizing: border-box;
+    margin-left: 11rem;
   }
-  
-  .about-pic {
-    width: 55%;
-  }
-}
 
-@media (max-width: 992px) {
-  .about-content p {
-    width: 40%;
+  .symbol-text {
+    font-size: .8em;
   }
-  
-  .about-pic {
-    width: 50%;
-  }
-}
 
-@media (max-width: 768px) {
-  .about-content {
-    width: 20%;
+  .symbol-image {
+    height: 40px;
+    width: auto;
   }
-  
-  .about-pic {
-    width: 60%;
-  }
-}
 
-@media (max-width: 576px) {
-  .content-container {
-    flex-direction: column;
+  .symbol-item {
+    margin-right: 2rem;
     align-items: center;
   }
-  
-  .about-content, .about-pic {
-    width: 100%;
+
+  .about h1 {
+    font-size: 30px;
+    width: 21rem;
+    text-align: center;
   }
-  
+
+  .about p {
+    text-align: center;
+    margin-left: 1.5rem;
+    font-size: 15px;
+    width: 18rem;
+  }
+
   .aboutpic {
-    height: auto; /* Ensure image height adjusts to width */
+    margin-top: 22rem;
+    height: auto;
+    width: 22rem;
+    margin-right: -.2rem;
+    padding: 0.8rem;
   }
+
+  .about  {
+    text-align: center;
+    margin-top: 3rem;
+    height: 60rem;
+    font-size: 14px;
+    padding: 0.5rem 1rem;
+  }
+
+  .facebooklogo {
+    align-items: center;
+    margin-left: 8rem;
+    position: relative;
+    top: 8rem; /* Adjust top for exact spacing */
+  }
+  
+
+  
 }
 
 
