@@ -1,4 +1,4 @@
-/* header2.css */
+
 .header2 {
     position: fixed; /* Fixed position */
     top: 0; /* Aligns the header to the top of the viewport */
@@ -25,6 +25,16 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+  }
+
+  .header-logo { 
+    max-width: 150px; 
+    cursor: pointer; 
+    filter: brightness(0.1); /* Adjust the value to make the image darker */ 
+  } 
+  
+  .header2-scrolled .header-logo 
+  { filter: none; /* Reset filter to ensure logo visibility on white background */ 
   }
   
 
