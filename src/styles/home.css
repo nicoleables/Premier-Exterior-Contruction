@@ -1,5 +1,5 @@
 .home {
-  height: 88vh; /* Full viewport height */
+  height: 100vh; /* Full viewport height */
   width: 100vw;
   display: flex;
   align-items: center; /* Vertically center content */
