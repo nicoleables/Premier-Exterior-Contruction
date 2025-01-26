@@ -1,12 +1,11 @@
-
 .reviews {
   color: white;
   text-align: center;
   margin: 2rem auto;
   padding-top: 0; /* Remove top padding */
   position: relative;
-  width: auto;
-  height: 100vh; /* Full viewport height */
+  width: 100%; /* Ensure it takes the full width */
+  min-height: 100vh; /* Full viewport height */
   display: flex;
   flex-direction: column; /* Stack items vertically */
   justify-content: flex-start; /* Start at the top */
@@ -27,144 +26,147 @@
 }
 
 .review-intro {
-  width: 100%;
-  text-align: left;
-  padding: 2rem 0;
+  max-width: 1400px; /* Maximum width for larger screens */ 
+  margin: 0 auto;
+  align-items: center;
+  text-align: center;
+  padding: 1rem; /* Reduce padding */
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   color: white;
-  padding-left: 2rem; /* Adjust padding as needed */
+  padding-left: -20rem; /* Adjust padding as needed */
+  margin-bottom: 1.2rem;
+}
+
+.review-intro h1 {
+  font-size: 1.2rem; /* Adjust as needed */
+  margin-bottom: 3rem;
+  padding-left: 1rem;
+}
+
+.review-intro p {
+  font-size: 2rem; /* Adjust as needed */
+  margin-bottom: 1rem;
+  display: flex; /* Flexbox for positioning line and button */
+  align-items: center;
+  flex-wrap: nowrap;
+  position: relative;
+  display: inline-block; /* Prevent wrapping */
+  left: 1.5rem;
+}
+
+.review-intro p::after {
+  content: "";
+  position: absolute;
+  top: 50%; /* Center the line vertically */
+  left: 100%; 
+  width: 20rem; /* Adjust width as needed */
+  height: 1px; /* Height of the line */
+  background-color: rgb(164, 0, 0);
+  margin-left: 1.3rem; /* Space between text and line */
+  height: 2px; /* Height of the line */
+}
+
+.reviewbtn {
+  background-color: white; /* Button background */
+  color: black; /* Button text color */
+  font-weight: bold;
+  border: none;
+  padding: 0.75rem 1.8rem;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 4px; /* Rounded corners */
+  transition: transform 0.3s ease; /* Smooth transition for scaling */
+  position: relative; /* Relative to its containing block */
+  top: -60px; /* Adjust the button position */
+  margin-left: 32.6rem; /* Adjust the button position */
+}
+
+.reviewbtn:hover {
+  transform: scale(1.1); /* Scale the button to 110% on hover */
+}
+
+.review-slides {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+  margin-top: 2rem;
   margin-bottom: 2rem;
-  justify-content: space-between;
-  }
-  
-  .review-intro h1 {
-    font-size: 1.2rem; /* Adjust as needed */
-    margin-bottom: 1rem;
-    padding-left: 2rem;
-  }
-  
-  .review-intro p {
-    font-size: 3rem; /* Adjust as needed */
-    margin-bottom: 1rem;
-    display: flex; /* Flexbox for positioning line and button */
-    align-items: center;
-    flex-wrap: nowrap;
-    font-size: 3.1rem; /* Adjust font size as needed */
-    margin-bottom: 1rem;
-    position: relative;
-    display: inline-block; /* Prevent wrapping */
-  }
-  
-  .review-intro p::after {
-    content: "";
-    position: absolute;
-    top: 50%; /* Center the line vertically */
-    left: 100%; 
-    width: 24rem; /* Adjust width as needed */
-    height: 1px; /* Height of the line */
-    background-color: rgb(164, 0, 0);
-    margin-left: 15px;
-    flex-grow: 1;
-    margin-left: 1rem; /* Space between text and line */
-    height: 2px; /* Height of the line */
-    background-color: rgb(164, 0, 0);
-  }
-  
-  .reviewbtn {
-    background-color: white; /* Button background */
-    color: black; /* Button text color */
-    font-weight: bold;
-    border: none;
-    padding: 0.75rem 1.5rem;
-    font-size: 1rem;
-    cursor: pointer;
-    border-radius: 4px; /* Rounded corners */
-    transition: transform 0.3s ease; /* Smooth transition for scaling */
-    position: relative; /* Relative to its containing block */
-    top: -70px; /* Move the button up */
-    left: 40rem; /* Move the button to the right */
-  }
-  
-  .reviewbtn:hover {
-    transform: scale(1.1); /* Scale the button to 110% on hover */
-  }
+  transform: translateY(-20px); /* Adjust the position */
+}
 
-  
-  .review-slides {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    width: 100%;
-    margin-top: 2rem;
-    transform: translateY(-50px); /* Move the review part up */
-  }
-  
-  .review-box {
-    background-color: #fff;
-    padding: 2rem;
-    margin: 0 1rem;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    max-width: 500px;
-  }
+.review-box {
+  background-color: #fff;
+  padding: 1rem; /* Adjust padding */
+  margin: 0 1rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%; /* Adjust width to fit the screen */
+  max-width: 400px;
+  height: 500px; /* Adjust height */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 
-  .review-box p {
-    color: black;
-  }
-  
-  .stars {
-    color: yellow;
-    font-size: 1.5rem;
-    margin-bottom: 0.5rem;
-  }
-  
-  .arrow {
-    background: rgb(164, 0, 0);
-    border: none;
-    font-size: 2rem;
-    cursor: pointer;
-    color: white; /* Change arrow color to red */
-    transition: color 0.3s;
-    outline: none; /* Remove default outline */
-  }
-  
-  .arrow:focus {
-    outline: 3px solid rgb(164, 0, 0); /* Custom red outline */
-  }
-  
-  
-  .left-arrow {
-    position: absolute;
-    left: 0;
-  }
-  
-  .right-arrow {
-    position: absolute;
-    right: 0;
-  }
+.review-box p {
+  color: black;
+  overflow-y: auto; /* Allow scrolling for long reviews */
+}
+
+.stars {
+  color: yellow;
+  font-size: 1.2rem; /* Adjust font size */
+  margin-bottom: 0.5rem;
+}
+
+.arrow {
+  background: rgb(164, 0, 0);
+  border: none;
+  font-size: 2.5rem; /* Adjust font size */
+  cursor: pointer;
+  color: white; /* Change arrow color to red */
+  transition: color 0.3s;
+  outline: none; /* Remove default outline */
+}
+
+.arrow:focus {
+  outline: 3px solid rgb(164, 0, 0); /* Custom red outline */
+}
+
+.left-arrow {
+  position: absolute;
+  left: 0;
+}
+
+.right-arrow {
+  position: absolute;
+  right: 0;
+}
 
 .leavereviewbox {
-    display: flex;
-    justify-content: center;
-    height: 28%;
-    width: auto;
-    padding: 20px;
-    background-color: black;
-    align-content: center;
-    box-sizing: border-box; /* Ensure padding and border are included in the element's total width and height */
-    border: 2px solid white; /* Add the white border here */
+  display: flex;
+  justify-content: center;
+  height: 20%; /* Adjust height */
+  width: 30%; /* Ensure it takes the full width */
+  padding: 10px; /* Adjust padding */
+  background-color: black;
+  align-content: center;
+  box-sizing: border-box; /* Ensure padding and border are included in the element's total width and height */
+  border: 1px solid white; /* Add the white border here */
 }
 
 .review-container {
-    align-content: center;
+  align-content: center;
 }
 
 .facebook-review {
-    display: flex;
-    align-items: center; 
-    justify-content: center;
+  display: flex;
+  align-items: center; 
+  justify-content: center;
 }
 
 .facebook-link { 
@@ -175,14 +177,14 @@
 }
 
 .reviewfacebook-logo {
-  margin-top: 2rem;
-    height: 50px;
+  margin-top: 1rem; /* Adjust margin */
+  height: 50px;
 }
 
 .review-call-to-action {
   text-decoration: none; 
   color: inherit; /* Ensure the link takes the color of its parent */
-  margin-top: 2rem;
+  margin-top: 1rem; /* Adjust margin */
   width: 80%;
   height: 3.2rem;
   align-content: center;
@@ -199,7 +201,7 @@
 
 .review-call-to-action p { 
   margin: 0; 
-  font-size: 18px; 
+  font-size: 16px; /* Adjust font size */
   font-weight: bold; 
   cursor: pointer; 
   color: white; /* Ensure the text color remains consistent */
@@ -208,6 +210,61 @@
   align-items: center; /* Center vertically */
   justify-content: center; /* Center horizontally */
   height: 100%; /* Full height of the container */
+}
+
+@media (max-width: 480px) {
+  .review-intro {
+    margin-left:-1.4rem;
+  }
+
+  .review-intro h1 {
+    font-size: 13px;
+    width: 23rem;
+  }
+  
+  .reviewbtn { 
+    font-size: 10.3px;
+    margin: 0; /* Reset margin */ 
+    position: relative; /* Use relative positioning */ 
+    left: 14.5rem; /* Ensure button is centered */ 
+    top: -50px; /* Adjust top position */ 
+    transform: translateX(0); 
+    width: 8.1rem;
+    padding: .7rem 1rem;
+
+  }
+
+  .review-intro p {
+    margin-left: 5px;
+    font-size: 24px;
+  }
+
+  .review-intro p::after { 
+    margin-left: 10px;
+    width: 5rem;
+  }
+
+  .review-box {
+    margin-top: -5rem;
+    width: 80%; /* Adjust width */
+    height: 400px; /* Adjust height */
+  }
+
+  .stars {
+    font-size: 1rem; /* Adjust font size */
+  }
+
+  .arrow {
+    font-size: 1.1rem; /* Adjust font size */
+  }
+
+  .review-call-to-action{
+  width: 10rem;
+  }
+  .leavereviewbox {
+    margin-bottom: 1rem;
+    width: 15rem;
+  }
 }
 
 
