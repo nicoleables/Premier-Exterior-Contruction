@@ -88,5 +88,66 @@
   font-size: 40px;
 }
 
+@media (max-width: 480px) {
+  .service {
+    justify-content: center; /* Center symbols horizontally */
+    align-items: center;
+    width: 100%;
+    padding: .25rem 0; /* Add padding for spacing */
+    box-sizing: border-box;
+  }
+
+  .service h1 {
+    font-size: .8em;
+  }
+
+  .service p {
+    font-size: 1.8rem;
+    margin-left: .1rem;
+  }
+
+  .service p::after {
+    margin-left: .5rem;
+    width: 80%;
+  }
+
+  .icons {
+    font-size: 60px;
+    width: 11.8rem;
+    text-align: center;
+  }
+
+  .icons h2{
+    text-align: center;
+    margin-left: 1.5rem;
+    font-size: 18px;
+    width: 20rem;
+  }
+
+  .aboutpic {
+    margin-top: 22rem;
+    height: auto;
+    width: 22rem;
+    margin-right: -.2rem;
+    padding: 0.8rem;
+  }
+
+  .about  {
+    text-align: center;
+    margin-top: 3rem;
+    height: 60rem;
+    font-size: 14px;
+    padding: 0.5rem 1rem;
+  }
+
+  .facebooklogo {
+    align-items: center;
+    margin-left: 8rem;
+    position: relative;
+    top: 8rem; /* Adjust top for exact spacing */
+  }
+ 
+}
+
 
 
