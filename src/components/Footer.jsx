@@ -1,5 +1,6 @@
 // eslint-disable-next-line no-unused-vars
 import React, { useState } from "react";
+import emailjs from 'emailjs-com';
 import "../styles/footer.css";
 import "../styles/global.css";
 import facebook from "../assets/footer/images/footerfacebooklogo.png";
@@ -7,28 +8,69 @@ import '../styles/modal.css';
 
 function Footer() {
   const [modalOpen, setModalOpen] = useState(false);
+  const [formSubmitted, setFormSubmitted] = useState(false);
+  const [errMessage, setErrorMessage] = useState("");
 
   const openModal = () => setModalOpen(true);
-  const closeModal = () => setModalOpen(false);
+  const closeModal = () => {
+    setModalOpen(false);
+    setFormSubmitted(false);
+    setErrorMessage("");
+  };
 
-  const handleSubmit = async (event) => {
+  const handleSubmit = (event) => {
     event.preventDefault();
     const formData = new FormData(event.target);
-    const formObject = Object.fromEntries(formData.entries());
   
-    try {
-      const response = await fetch('/.netlify/functions/sendEmail', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(formObject),
-      });
+    // Extract individual values from the form data
+    const fullName = formData.get("fullName");
+    const phoneNumber = formData.get("phoneNumber");
+    const email = formData.get("email");
+    const address = formData.get("address");
+    const preferredDate = formData.get("preferredDate");
+    const services = Array.from(formData.entries())
+      .filter(([key, value]) => key.startsWith("service") && value)
+      .map(([, value]) => value)
+      .join(", ");
+    const help = formData.get("help");
   
-      const result = await response.json();
-      console.log(result);
-    } catch (error) {
-      console.error('Error:', error);
+    if (!fullName || !phoneNumber || !email || !address || !preferredDate || !help) {
+      setErrorMessage("Please fill in all required fields.");
+      return;
+    }
+  
+    // Ensure the date is valid before formatting
+    if (preferredDate) {
+      const date = new Date(preferredDate);
+      const formattedDate = `${date.getMonth() + 1}/${date.getDate()}/${date.getFullYear()}`;
+  
+      // Create a templateParams object for EmailJS
+      const templateParams = {
+        fullName,
+        phoneNumber,
+        email,
+        address,
+        preferredDate: formattedDate, // Use the formatted date here
+        services,
+        help,
+      };
+  
+      // Log the template parameters to ensure they are correct
+      console.log('Sending templateParams:', templateParams);
+  
+      emailjs.send("service_vaqr1un", "template_4yrub3r", templateParams, "KMzz-w9adu3bolNiq")
+        .then((response) => {
+          console.log('SUCCESS!', response.status, response.text);
+          setFormSubmitted(true);
+        })
+        .catch((error) => {
+          console.error('FAILED...', error); // Log the error details
+          setErrorMessage("Failed to send message. Please try again.");
+        });
+  
+      event.target.reset();
+    } else {
+      setErrorMessage("Invalid date provided.");
     }
   };
 
@@ -98,11 +140,12 @@ function Footer() {
           <span>Friday: 8:00am - 10:00pm</span>
           <span>Saturday: 8:00am - 10:00pm</span>
         </div>
-      </div>
-      <div className="red-line"></div>
+          </div>
+         <div className="red-line"></div>
       <div className="footer-bottom">
         <p>© 2024 Premier Exterior Construction. All Rights Reserved.</p>
       </div>
+    
       
       {modalOpen && (
         <div className="modal" onClick={closeModal}>
@@ -175,20 +218,24 @@ function Footer() {
                 <label htmlFor="help">How can we help?</label>
                 <textarea id="help" name="help" rows="4"></textarea>
               </div>
-              <div className="form-row full-width">
-                <label htmlFor="upload">Upload a photo:</label>
-                <input type="file" id="upload" name="upload" />
-              </div>
               <div className="form-row">
                 <button type="submit">Send</button>
               </div>
             </form>
+            {errMessage && (
+                <div className="error-text">{errMessage}</div>
+              )}
+              {formSubmitted && (
+                <div className="success-text">Message sent successfully!</div>
+              )}
           </div>
         </div>
       )}
     </footer>
   );
 }
+
+export default Footer;
 
 export default Footer;
 
