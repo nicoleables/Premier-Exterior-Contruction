@@ -39,10 +39,53 @@
   color: black;
 }
 
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+  .header {
+    height: 5rem; /* Adjust header height for smaller screens */
+    justify-content: space-between;
+  }
+  .header-logo {
+    max-width: 100px; /* Adjust logo size */
+    margin-left: 1rem; /* Move logo towards the top-left corner */
+  }
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem 0;
+  }
+  .navbar ul.nav-list {
+    display: none; /* Hide the nav items by default */
+  }
+  .navbar ul.nav-list.show {
+    display: flex; /* Show the nav items when the menu is toggled */
+    flex-direction: column;
+  }
+}
 
+@media (max-width: 480px) {
+  .header {
+    height: 4rem; /* Adjust header height for smaller screens */
+    justify-content: space-between;
+  }
+  .header-logo {
+    max-width: 80px; /* Adjust logo size */
+    margin-left: -1rem; /* Move logo towards the top-left corner */
+  }
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0.1rem 0;
+  }
+  .navbar a, .nav-link {
+    padding: 0rem; /* Adjust padding for smaller screens */
+    font-size: 0.5rem; /* Adjust font size for smaller screens */
+  }
+}
 
-
-
-
-  
-  
+@media (min-width: 769px) {
+  .navbar {
+    flex-direction: row; /* Display nav items side by side on larger screens */
+    justify-content: flex-end; /* Move nav items to the right */
+  }
+}
