@@ -1,7 +1,14 @@
-* { 
-    margin: 0; 
-    padding: 0;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
+
+.main-content2 {
+  width: 100%;
+  overflow-x: hidden; /* Prevent horizontal overflow */
+}
+
 
 /* pages.css */
 .image-container2 {
@@ -31,7 +38,7 @@
     align-items: center;
     font-size: 15px;
     left: 50%;
-    bottom: 110%;
+    bottom: 98%;
     transform: translate(-50%, -50%);
     background: black;
     padding: 5px;
@@ -60,25 +67,39 @@
   /* Container for the text section */
   .aboutp2 {
     background-color: white;
-    display: flex; /* Use flexbox for centering content */
-    justify-content: center; /* Center the content horizontally */
-    align-items: center; /* Center the content vertically */
-    padding: 20px; /* Add padding to ensure there is space around the inner container */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    width: 100%;
+    box-sizing: border-box;
   }
   
-  /* Container for the paragraphs */
   .paragrapgp2 {
     background-color: white;
-    padding: 20px; /* Add padding inside the white container */
-    border-radius: 10px; /* Optional: Add rounded corners to the white container */
-    color: black; /* Ensure the text color is black */
-    max-width: 100rem; /* Adjust the width as needed to make the background wider */
-    width: 100%; /* Ensure the container takes up the full width available */
-    text-align: left; /* Align text to the left */
-    min-height: 50rem; /* Set a minimum height to make the background taller */
-    display: flex; /* Use flexbox for centering text */
-    flex-direction: column; /* Use column direction for text */
-    justify-content: center; /* Center the text vertically */
+    padding: 20px;
+    border-radius: 10px;
+    color: black;
+    max-width: 100%;
+    width: 100%;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     font-size: 18px;
+  }
+  
+  @media (max-width: 768px) {
+    .paragrapgp2 {
+      font-size: 16px;
+      padding: 15px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .paragrapgp2 {
+      font-size: 14px;
+      padding: 10px;
+    }
   }
 
