@@ -25,7 +25,7 @@ const RoofPage = () => {
   const handleSubmit = (event) => {
     event.preventDefault();
     const formData = new FormData(event.target);
-
+  
     // Extract individual values from the form data
     const fullName = formData.get("fullName");
     const phoneNumber = formData.get("phoneNumber");
@@ -37,36 +37,45 @@ const RoofPage = () => {
       .map(([, value]) => value)
       .join(", ");
     const help = formData.get("help");
-    const upload = formData.get("upload");
-
+  
     if (!fullName || !phoneNumber || !email || !address || !preferredDate || !help) {
       setErrorMessage("Please fill in all required fields.");
       return;
     }
-
-    // Create a templateParams object for EmailJS
-    const templateParams = {
-      fullName,
-      phoneNumber,
-      email,
-      address,
-      preferredDate,
-      services,
-      help,
-      upload: upload ? "Yes" : "No"
-    };
-
-    emailjs.send("service_uhczwkr", "template_02wul1o", templateParams, "RCz6_rVPS8yn6M2xP")
-      .then((response) => {
-        console.log('SUCCESS!', response.status, response.text);
-        setFormSubmitted(true);
-      })
-      .catch((error) => {
-        console.log('FAILED...', error);
-        setErrorMessage("Failed to send message. Please try again.");
-      });
-
-    event.target.reset();
+  
+    // Ensure the date is valid before formatting
+    if (preferredDate) {
+      const date = new Date(preferredDate);
+      const formattedDate = `${date.getMonth() + 1}/${date.getDate()}/${date.getFullYear()}`;
+  
+      // Create a templateParams object for EmailJS
+      const templateParams = {
+        fullName,
+        phoneNumber,
+        email,
+        address,
+        preferredDate: formattedDate, // Use the formatted date here
+        services,
+        help,
+      };
+  
+      // Log the template parameters to ensure they are correct
+      console.log('Sending templateParams:', templateParams);
+  
+      emailjs.send("service_vaqr1un", "template_4yrub3r", templateParams, "KMzz-w9adu3bolNiq")
+        .then((response) => {
+          console.log('SUCCESS!', response.status, response.text);
+          setFormSubmitted(true);
+        })
+        .catch((error) => {
+          console.error('FAILED...', error); // Log the error details
+          setErrorMessage("Failed to send message. Please try again.");
+        });
+  
+      event.target.reset();
+    } else {
+      setErrorMessage("Invalid date provided.");
+    }
   };
 
   return (
@@ -165,10 +174,6 @@ const RoofPage = () => {
                 <div className="form-row full-width">
                   <label htmlFor="help">How can we help?</label>
                   <textarea id="help" name="help" rows="4"></textarea>
-                </div>
-                <div className="form-row full-width">
-                  <label htmlFor="upload">Upload a photo:</label>
-                  <input type="file" id="upload" name="upload" />
                 </div>
                 <div className="form-row">
                   <button type="submit">Send</button>
