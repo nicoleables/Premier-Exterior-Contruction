@@ -1,12 +1,12 @@
 /* eslint-disable no-unused-vars */
-/* eslint-disable no-unused-vars */
 import React, { useEffect } from "react";
 import { Link } from 'react-router-dom';
 import '../styles/header2.css';
 import '../styles/navbar2.css';
 import Navbar2 from "./Navbar2";
 
-function Header2() {
+// eslint-disable-next-line react/prop-types
+function Header2({ scrollToSection, refs }) {
   useEffect(() => {
     const handleScroll = () => {
       const header = document.getElementById("header2");
@@ -19,8 +19,6 @@ function Header2() {
       }
     };
 
-    handleScroll();
-
     window.addEventListener("scroll", handleScroll);
     return () => {
       window.removeEventListener("scroll", handleScroll);
@@ -28,12 +26,12 @@ function Header2() {
   }, []);
 
   return (
-    <header className="header2 header-default" id="header2">
+    <header className="header2 header2-default" id="header2">
       <div className="header2-container">
         <Link to="/" onClick={() => window.scrollTo(0, 0)} className="header-logo-link">
           <img src="/premier logo.webp" alt="Premier Exterior Construction Logo" className="header-logo" />
         </Link>
-        <Navbar2 />
+        <Navbar2 className="navbar2" scrollToSection={scrollToSection} refs={refs} />
       </div>
     </header>
   );
