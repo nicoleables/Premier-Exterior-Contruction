@@ -1,30 +1,93 @@
-/* navbar.css */
+/* Default link styles */
+.nav-link2 {
+  color: inherit; /* Inherit color from header */
+  text-decoration: none; /* Remove underline */
+  transition: color 0.3s; /* Smooth transition */
+  height: 3.2rem;
+}
+
+/* Hover styles */
+.nav-link2:hover {
+  z-index: 2000;
+  color: rgb(164, 0, 0);
+  cursor: pointer;
+}
+
+/* Navbar styles */
 .navbar2 {
-    display: flex;
-    justify-content: flex-end;
-    padding: 10px;
+  display: flex;
+  justify-content: center; /* Center the .ul container */
+  align-items: center;
+  width: 100%;
+}
+
+.navbar2 ul {
+  list-style: none; /* Remove default list styling */
+  margin: 0 auto; /* Center the ul itself */
+  padding: 0; /* Remove default padding */
+  display: flex; /* Use flexbox for the list */
+  justify-content: center; /* Center the nav items */
+  align-items: center;
+}
+
+.nav-item2 {
+  margin-left: 12px; /* Ensure no right margin */
+  padding: 0; /* Remove padding if needed */
+}
+
+.nav-item2-scrolled {
+  color: black;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+  .header2 {
+    height: 5rem; /* Adjust header height for smaller screens */
+    justify-content: space-between;
   }
-  
-  .navbar2 ul {
-    list-style: none;
-    display: flex;
-    margin: 0;
-    padding: 0;
+  .header-logo {
+    max-width: 100px; /* Adjust logo size */
+    margin-left: 1rem; /* Move logo towards the top-left corner */
   }
-  
-  .nav-item2 {
-    margin-left: 20px;
+  .navbar2 {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem 0;
   }
-  
-  .nav-link2 {
-    text-decoration: none;
-    color: black;
-    transition: color 0.3s;
-    cursor: pointer; /* Make sure it's clear that these are clickable links */
+  .navbar2 ul.nav2-list {
+    display: none; /* Hide the nav items by default */
   }
-  
-  .nav-link2:hover {
-    color: rgb(164, 0, 0);
+  .navbar2 ul.nav2-list.show {
+    display: flex; /* Show the nav items when the menu is toggled */
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 480px) {
+  .header2 {
+    height: 4rem; /* Adjust header height for smaller screens */
+    justify-content: space-between;
+  }
+  .header-logo {
+    max-width: 80px; /* Adjust logo size */
+    margin-left: .1rem; /* Move logo towards the top-left corner */
+  }
+  .navbar2 {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0.1rem 0;
+  }
+  .navbar2 a, .nav-link2 {
+    padding: 0rem; /* Adjust padding for smaller screens */
+    font-size: 0.5rem; /* Adjust font size for smaller screens */
+  }
+}
+
+@media (min-width: 769px) {
+  .navbar2 {
+    flex-direction: row; /* Display nav items side by side on larger screens */
+    justify-content: flex-end; /* Move nav items to the right */
+  }
 }
   
  
