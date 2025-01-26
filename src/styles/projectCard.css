@@ -48,7 +48,6 @@
   margin-left: 15px;
   flex-grow: 1;
   margin-left: 1rem; /* Space between text and line */
-  height: 2px; /* Height of the line */
   background-color: rgb(164, 0, 0);
 }
 
@@ -164,4 +163,62 @@
 
 .project-container li:nth-child(5) {
   margin-left: calc(1% - 9rem); /* Center within the middle row, adjusted for image width */
+}
+
+@media (max-width: 480px) {
+  .project {
+    justify-content: center; /* Center symbols horizontally */
+    align-items: center;
+    width: 80%;
+    padding: .25rem 0; /* Add padding for spacing */
+    box-sizing: border-box;
+  }
+
+  .project h1 {
+    font-size: .8em;
+    margin-left: -1.2rem
+  }
+
+  .project p {
+    font-size: 1.8rem;
+    margin-left: -1.6rem;
+  }
+
+  .project p::after {
+    margin-left: .4rem;
+    width: 55%;
+  }
+
+    .project-container ul {
+      display: grid;
+      margin-top: -2rem;
+      grid-template-columns: repeat(3, 1fr); /* Define three columns */
+      gap: 1.8rem; /* Add space between items */
+      justify-items: center; /* Center items horizontally */
+    }
+  
+    .project-container ul li:nth-child(4),
+    .project-container ul li:nth-child(5) {
+      grid-column: span 1.5; 
+      margin-right:-3rem;/* Make the fourth and fifth items span across three columns */
+    }
+  
+    .project-container ul li:nth-child(6) {
+      grid-column: 1 / span 1; /* Make the sixth item span across two columns, starting at the first column */
+    }
+  
+    .project-container ul li:nth-child(7),
+    .project-container ul li:nth-child(8) {
+      grid-column: span 1; /* Ensure the seventh and eighth items each take one column */
+    }
+  
+    .projecticons {
+      font-size: 40px; /* Adjust font size for smaller screens */
+      width: 6rem; /* Adjust width */
+      height: 6rem; /* Adjust height */
+      text-align: center;
+      margin-left: -.7rem;
+    }
+  
+ 
 }
