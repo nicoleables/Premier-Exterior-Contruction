@@ -169,7 +169,7 @@
   .project {
     justify-content: center; /* Center symbols horizontally */
     align-items: center;
-    width: 80%;
+    width: 90%;
     padding: .25rem 0; /* Add padding for spacing */
     box-sizing: border-box;
   }
@@ -180,17 +180,24 @@
   }
 
   .project p {
-    font-size: 1.8rem;
-    margin-left: -1.6rem;
+    font-size: 1.2rem;
+    margin-left: -1.9rem;
   }
 
   .project p::after {
     margin-left: .4rem;
-    width: 55%;
+    width: 20%;
+  }
+
+  button.projectbtn {
+    margin-left: -22.5rem;
+    font-size: .5rem;
+    top: -3.1rem
   }
 
     .project-container ul {
       display: grid;
+      margin-left: 1rem;
       margin-top: -2rem;
       grid-template-columns: repeat(3, 1fr); /* Define three columns */
       gap: 1.8rem; /* Add space between items */
@@ -221,4 +228,35 @@
     }
   
  
+}
+
+@media (min-width: 535px) and (max-width: 540px) and (min-height: 838px) and (max-height: 845px) {
+  .projects-intro p {
+    width: 90%;
+    margin-left: -3rem;
+    font-size: 2rem;
+  }
+
+  .projects-intro p::after {
+    width: 20%;
+    margin-left: -12rem;
+    font-size: 2rem;
+  }
+
+  .projectbtn {
+    margin-left: -15rem;
+    font-size: .8rem;
+    top: -3.7rem
+  }
+
+  .projecticons {
+    margin-top: -5rem;
+    width: 10rem;
+    margin-left: -2.5rem;
+    margin-bottom: 5rem;
+  }
+
+  .project-container li:nth-child(5) {
+    margin-left: -6rem;
+  }
 }
