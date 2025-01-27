@@ -84,7 +84,7 @@
   margin-right: 2rem;
 }
 
-.facebooklogo {
+.aboutfacebooklogo {
   margin-top: 2rem;
   height: 80px;
   width: 80px;
@@ -153,7 +153,7 @@
     margin-bottom: 2rem;
   }
 
-  .aboutpic {
+  .about-pic {
     margin-top: -2rem; /* Further reduce top margin */
     height: auto;
     width: 150%; /* Use percentage for responsive width */
@@ -161,7 +161,6 @@
     padding: 0.5rem; /* Adjust padding */
     margin-bottom: -1rem; /* Further reduce bottom margin */
     margin: 0 auto; /* Center the image */
-    object-fit: cover; /* Maintain image aspect ratio */
     margin-left: -18%
   }
 
@@ -178,10 +177,5 @@
     margin: -42rem auto; /* Further reduce space between elements */
     position: relative;
     margin-top: -3rem; /* Move up the Facebook logo further */
-    height: 40px;
-    width: 40px;
   }
 }
-
-  
-  
