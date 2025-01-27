@@ -205,14 +205,13 @@
     }
     
     .quote-section {
-      margin-right: -2rem;
       margin-bottom: 8rem;
       position: relative; /* Ensure the section is positioned relative to its parent container */
     }
     
     .quote-section h2 {
       position: relative; /* Position the heading relative to its parent */
-      right: 1.5rem;
+      right: 2.5rem;
       font-size: 30px;
       top: -8rem; /* Move the heading up */
     }
@@ -223,23 +222,24 @@
     }
     
     .quote-section p {
-      position: relative; /* Position the paragraph relative to its parent */
-      font-size: 18px;
-      width: 25rem;
-      top: -8.5rem; 
-      margin-left: -1.7rem;
+        position: relative;
+        font-size: 18px;
+        width: 25rem;
+        top: -8.5rem;
+        margin-left: -2.8rem;
+        width: 100%;
       /* Move the paragraph up in sync with the heading */
     }
     
     .quote-box-container {
-      margin-left: -.5rem; /* Align paragraph to the left */
+      left: 0; /* Align paragraph to the left */
       gap: 1.5rem; /* Space between boxes */
       margin-top: -5rem; /* Adjust margin */
     }
   
     .quote-box {
       top: -2.5rem; 
-      margin-right: 2.rem;
+      margin-right: 1.rem;
       width: 80%; /* Ensure it takes full width */
       max-width: 100px; /* Set maximum width */
       padding: .1rem; /* Adjust padding */
@@ -248,7 +248,7 @@
     }
   
     .red-box {
-      margin-left: -1.5rem;
+      margin-left: -3rem;
       width: 100px;
       height: 9rem;
     }
