@@ -74,6 +74,7 @@
 .aboutpic {
   height: 30rem;
   width: auto;
+  margin-left: 2rem;
 }
 
 .about-pic {
@@ -154,15 +155,16 @@
   }
 
   .aboutpic {
-    margin-top: 5rem; /* Further reduce top margin */
-    height: auto;
-    width: 150%; /* Use percentage for responsive width */
-    max-width: 700px; /* Add max-width to prevent overflow */
-    padding: 0.5rem; /* Adjust padding */
-    margin-bottom: -1rem; /* Further reduce bottom margin */
-    margin: 0 auto; /* Center the image */
-    object-fit: cover; /* Maintain image aspect ratio */
-    margin-left: -18%
+   .about .aboutpic {
+    margin-top: 5rem !important;
+    height: auto !important;
+    width: 150% !important;
+    max-width: 700px !important;
+    padding: 0.5rem !important;
+    margin-bottom: -1rem !important;
+    margin: 0 auto !important;
+    object-fit: cover !important;
+    margin-left: -18% !important;
   }
 
   .about-pic {
