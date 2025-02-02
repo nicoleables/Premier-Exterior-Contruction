@@ -105,6 +105,12 @@
 }
 
 @media (max-width: 480px) {
+
+  .about {
+    text-align: center;
+    margin-top: 1.5rem;
+  }
+  
   .about-symbols {
     flex-direction: row; /* Ensure horizontal alignment */
     justify-content: center; /* Center symbols horizontally */
@@ -156,17 +162,17 @@
   .aboutpic {
     margin-top: -2rem !important; /* Further reduce top margin */
     height: auto;
-    width: 150%; /* Use percentage for responsive width */
+    width: 25rem; /* Use percentage for responsive width */
     max-width: 700px; /* Add max-width to prevent overflow */
     padding: 0.5rem; /* Adjust padding */
     margin-bottom: -1rem; /* Further reduce bottom margin */
     margin: 0 auto; /* Center the image */
     object-fit: cover; /* Maintain image aspect ratio */
-    margin-left: -5.6rem;
+    margin-left: -6.9rem;
   }
 
   .about-pic {
-    text-align: center;
+    align-items: center;
     margin-top: 0.5rem; /* Further reduce top margin */
     height: auto; /* Adjust height for responsiveness */
     font-size: 14px;
@@ -176,7 +182,7 @@
   .aboutfacebooklogo {
     margin: -42rem auto; /* Further reduce space between elements */
     position: relative;
-    margin-top: -3rem; /* Move up the Facebook logo further */
+    margin-top: -3.5rem; /* Move up the Facebook logo further */
     
   }
 }
