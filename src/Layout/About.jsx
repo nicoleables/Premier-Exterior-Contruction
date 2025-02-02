@@ -2,7 +2,7 @@
 import React from "react";
 import "../styles/about.css";
 import "../styles/global.css";
-import image from "../assets/aboutus/images/aboutpic.webp";
+import aboutpic from '../assets/aboutus/images/aboutpic.webp';
 import facebook from '../assets/aboutus/images/facebook.png';
 import insured from "../assets/aboutus/images/insuredpic.png";
 import hands from "../assets/aboutus/images/handspic.png";
@@ -38,7 +38,7 @@ const About = () => {
           </div>
         </div>
         <div className="about-pic">
-          <img src={image} alt="about pic" className="aboutpic" />
+          <img src={aboutpic} alt="about pic" className="aboutpic" />
         </div>
       </div>
     </div>
