@@ -281,6 +281,9 @@
     .quote-section {
       margin-top: 36rem; /* Increase margin-top for even skinnier screens */
     }
+
+      .booko h1 {
+          margin-top: 5rem;
   }
 
   @media (min-device-width: 428px) and (max-device-width: 430px) and (min-device-height: 926px) and (max-device-height: 932px) and (-webkit-min-device-pixel-ratio: 3) {
