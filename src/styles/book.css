@@ -232,8 +232,8 @@
     }
     
     .quote-box-container {
-      margin-left: 1rem; /* Align paragraph to the left */
-      gap: 1.5rem; /* Space between boxes */
+      margin-left: .7rem; /* Align paragraph to the left */
+      gap: .1rem; /* Space between boxes */
       margin-top: -5rem; /* Adjust margin */
     }
   
@@ -280,7 +280,7 @@
 
   @media (max-width: 420px) {
     .quote-section {
-      margin-top: 36rem; /* Increase margin-top for even skinnier screens */
+      margin-top: 40rem; /* Increase margin-top for even skinnier screens */
     }
 
 
