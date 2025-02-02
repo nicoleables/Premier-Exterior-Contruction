@@ -81,7 +81,6 @@
   justify-content: flex-end;
   align-items: center;
   width: 50%; /* Ensure the image stays on the right */
-  margin-right: 2rem;
 }
 
 .aboutfacebooklogo {
@@ -180,7 +179,6 @@
     display: flex;
     justify-content: center;
     text-align: center;
-    margin-right: -2rem;
   }
 
   .aboutfacebooklogo {
