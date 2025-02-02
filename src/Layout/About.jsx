@@ -31,15 +31,15 @@ const About = () => {
           <p>
             At Premier Exterior Construction, we are a team of skilled welders serving Goldthwaite, Texas, and surrounding areas. With our expertise in welding, we are dedicated to providing top-quality exterior construction services for residential and commercial projects. Our commitment to customer satisfaction and attention to detail sets us apart in the industry.
           </p>
-          <div className="facebook-logo">
-            <a href="https://www.facebook.com/profile.php?id=100089862015650" target="_blank" rel="noopener noreferrer" className="facebook-link">
-              <img src={facebook} alt="logo" className="aboutfacebooklogo" />
-            </a>
-          </div>
         </div>
         <div className="about-pic">
           <img src={aboutpic} alt="about pic" className="aboutpic" />
         </div>
+      </div>
+      <div className="facebook-logo">
+        <a href="https://www.facebook.com/profile.php?id=100089862015650" target="_blank" rel="noopener noreferrer" className="facebook-link">
+          <img src={facebook} alt="logo" className="aboutfacebooklogo" />
+        </a>
       </div>
     </div>
   );
