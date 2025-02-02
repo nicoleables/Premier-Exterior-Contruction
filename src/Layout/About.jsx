@@ -3,7 +3,7 @@ import React from "react";
 import "../styles/about.css";
 import "../styles/global.css";
 import image from "../assets/aboutus/images/aboutpic.webp";
-import facebook from "../assets/aboutus/images/facebook.png";
+import facebook from "../assets/footer/images/footerfacebooklogo.png";
 import insured from "../assets/aboutus/images/insuredpic.png";
 import hands from "../assets/aboutus/images/handspic.png";
 import local from "../assets/aboutus/images/localpic.png";
