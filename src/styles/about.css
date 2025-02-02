@@ -6,11 +6,9 @@
   overflow: hidden;
   padding: 2rem;
   box-sizing: border-box;
-  height: auto; 
-  margin-top: 4rem; /* Adjust height as needed to make the section taller */
+  margin: 4rem 0; /* Combined margin-top and margin-bottom */
   align-items: center; /* Center content horizontally */
   text-align: center; /* Center text content */
-  margin-bottom: 4rem;
 }
 
 .about-symbols {
@@ -28,7 +26,6 @@
   align-items: center;
   justify-content: center; /* Center content within the item */
   margin: 0 1rem; /* Use margin for spacing */
-  width: auto; /* Adjust width as needed */
   text-align: center;
 }
 
@@ -55,7 +52,6 @@
   flex-direction: column;
   justify-content: flex-start;
   width: 30%; /* Adjust width as needed */
-  height: 100%; /* Make content fill the height */
   text-align: left; /* Align text to the left */
 }
 
@@ -77,7 +73,6 @@
 }
 
 .about-pic {
-  top: 2rem;
   justify-content: flex-end;
   align-items: center;
   width: 50%; /* Ensure the image stays on the right */
@@ -94,6 +89,7 @@
   transform: scale(1.1);
 }
 
+/* Media Queries */
 @media (max-width: 768px) {
   .about-symbols {
     flex-wrap: wrap; /* Allow wrapping on smaller screens */
@@ -105,78 +101,10 @@
 }
 
 @media (max-width: 480px) {
-  .about-symbols {
-    flex-direction: row; /* Ensure horizontal alignment */
-    justify-content: center; /* Center symbols horizontally */
-    align-items: center; /* Center symbols vertically */
-  }
-
-  .symbol-item {
-    margin: 0.5rem; /* Adjust margin for smaller screens */
-    width: auto; /* Ensure width is responsive */
-  }
-
-  .symbol-text {
-    font-size: 0.8rem; /* Adjust font size for smaller screens */
-  }
-
-  .symbol-image {
-    width: 30px; /* Adjust image size for smaller screens */
-  }
-
   .content-container {
     flex-direction: column; /* Stack text and image vertically */
     align-items: center; /* Center content horizontally */
-    width: 100%;
   }
 
   .about-content {
-    width: 90%; /* Adjust width for responsiveness */
-    max-width: 480px; /* Prevent overflow */
-    text-align: center; /* Center text */
-  }
-
-  .about-content h1 {
-    font-size: 30px;
-    width: 90%; /* Use percentage for responsive width */
-    text-align: center;
-    max-width: 350px;
-    margin: 0 auto; /* Center the element */
-  }
-
-  .about-content p {
-    text-align: center;
-    margin: 0 auto;
-    font-size: 15px;
-    width: 90%; /* Use percentage for responsive width */
-    max-width: 340px;
-    margin-bottom: 2rem;
-  }
-
-  .aboutpic {
-    margin-top: 5rem; /* Further reduce top margin */
-    height: auto;
-    width: 150%; /* Use percentage for responsive width */
-    max-width: 700px; /* Add max-width to prevent overflow */
-    padding: 0.5rem; /* Adjust padding */
-    margin-bottom: -1rem; /* Further reduce bottom margin */
-    margin: 0 auto; /* Center the image */
-    object-fit: cover; /* Maintain image aspect ratio */
-    margin-left: -18%
-  }
-
-  .about-pic {
-    text-align: center;
-    margin-top: 0.5rem; /* Further reduce top margin */
-    height: auto; /* Adjust height for responsiveness */
-    font-size: 14px;
-    padding: 0.5rem 1rem;
-  }
-
-  .aboutfacebooklogo {
-    margin: -42rem auto; /* Further reduce space between elements */
-    position: relative;
-    margin-top: -3rem; /* Move up the Facebook logo further */
-    
-  }
-}
+    width: 90%; /*
