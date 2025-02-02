@@ -3,7 +3,7 @@ import React from "react";
 import "../styles/about.css";
 import "../styles/global.css";
 import image from "../assets/aboutus/images/aboutpic.webp";
-import facebook from "../assets/footer/images/footerfacebooklogo.png";
+import facebook from '../assets/aboutus/images/facebook.png';
 import insured from "../assets/aboutus/images/insuredpic.png";
 import hands from "../assets/aboutus/images/handspic.png";
 import local from "../assets/aboutus/images/localpic.png";
@@ -33,7 +33,7 @@ const About = () => {
           </p>
           <div className="facebook-logo">
             <a href="https://www.facebook.com/profile.php?id=100089862015650" target="_blank" rel="noopener noreferrer" className="facebook-link">
-              <img src={facebook} alt="logo" className="facebooklogo" />
+              <img src={facebook} alt="logo" className="aboutfacebooklogo" />
             </a>
           </div>
         </div>
