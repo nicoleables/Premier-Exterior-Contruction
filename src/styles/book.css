@@ -279,7 +279,7 @@
 
   @media (max-width: 420px) {
     .quote-section {
-      margin-top: 42rem; /* Increase margin-top for even skinnier screens */
+      margin-top: 36rem; /* Increase margin-top for even skinnier screens */
     }
   }
 
