@@ -153,29 +153,30 @@
     margin-bottom: 2rem;
   }
 
-  .about-pic {
-    margin-top: -2rem; /* Further reduce top margin */
+  .aboutpic {
+    margin-top: 5rem; /* Further reduce top margin */
     height: auto;
     width: 150%; /* Use percentage for responsive width */
     max-width: 700px; /* Add max-width to prevent overflow */
     padding: 0.5rem; /* Adjust padding */
     margin-bottom: -1rem; /* Further reduce bottom margin */
     margin: 0 auto; /* Center the image */
+    object-fit: cover; /* Maintain image aspect ratio */
     margin-left: -18%
   }
 
-  .about {
+  .about-pic {
     text-align: center;
     margin-top: 0.5rem; /* Further reduce top margin */
     height: auto; /* Adjust height for responsiveness */
     font-size: 14px;
     padding: 0.5rem 1rem;
-    align-items: center; /* Center content horizontally */
   }
 
   .aboutfacebooklogo {
     margin: -42rem auto; /* Further reduce space between elements */
     position: relative;
     margin-top: -3rem; /* Move up the Facebook logo further */
+    
   }
 }
