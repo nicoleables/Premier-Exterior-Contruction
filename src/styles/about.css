@@ -168,7 +168,7 @@
     margin: 0 auto; /* Center the image */
     object-fit: cover; /* Maintain image aspect ratio */
     display: block;
-    text-align: center;
+    text-align: center !important;
   }
 
   .about-pic {
@@ -184,11 +184,11 @@
 
   .aboutfacebooklogo {
     margin: 1rem auto; /* Adjust space between elements */
-    position: relative !important;
+    position: relative;
     margin-top: 1rem; /* Adjust top margin */
-    display: flex !important;
-    justify-content: center !important;
-    align-items: center !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }
 
