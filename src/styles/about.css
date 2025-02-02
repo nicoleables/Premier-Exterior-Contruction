@@ -1,4 +1,4 @@
-about {
+.about {
   display: flex;
   flex-direction: column; /* Stack symbols and content vertically */
   background-color: black;
@@ -94,28 +94,7 @@ about {
   transform: scale(1.1);
 }
 
-
-/* Media Queries */
 @media (max-width: 768px) {
-  .about {
-    text-align: center; /* Center text */
-  }
-
-  .content-container {
-    flex-direction: column; /* Stack text and image vertically */
-    align-items: center; /* Center content horizontally */
-  }
-
-  .about-content {
-    width: 90%; /* Adjust width for responsiveness */
-    text-align: center; /* Center text */
-  }
-
-  .about-pic {
-    width: 100%; /* Make the image full width on smaller screens */
-    margin: 1rem auto; /* Center the image and reduce vertical spacing */
-  }
-
   .about-symbols {
     flex-wrap: wrap; /* Allow wrapping on smaller screens */
   }
@@ -126,11 +105,12 @@ about {
 }
 
 @media (max-width: 480px) {
+
   .about {
     text-align: center;
     margin-top: 1.5rem;
   }
-
+  
   .about-symbols {
     flex-direction: row; /* Ensure horizontal alignment */
     justify-content: center; /* Center symbols horizontally */
@@ -139,6 +119,7 @@ about {
 
   .symbol-item {
     margin: 0.5rem; /* Adjust margin for smaller screens */
+    width: auto; /* Ensure width is responsive */
   }
 
   .symbol-text {
@@ -157,6 +138,7 @@ about {
 
   .about-content {
     width: 90%; /* Adjust width for responsiveness */
+    max-width: 480px; /* Prevent overflow */
     text-align: center; /* Center text */
   }
 
@@ -174,14 +156,19 @@ about {
     font-size: 15px;
     width: 90%; /* Use percentage for responsive width */
     max-width: 340px;
-    margin-bottom: 1rem; /* Reduce bottom margin */
+    margin-bottom: 2rem;
   }
 
   .aboutpic {
-    display: block; /* Make the image a block element */
-    margin: 1rem auto; /* Center the image and reduce vertical spacing */
-    width: 100%; /* Make the image responsive */
-    max-width: 100%; /* Prevent overflow */
+    margin-top: -2rem !important; /* Further reduce top margin */
+    height: auto;
+    width: 25rem; /* Use percentage for responsive width */
+    max-width: 700px; /* Add max-width to prevent overflow */
+    padding: 0.5rem; /* Adjust padding */
+    margin-bottom: -1rem; /* Further reduce bottom margin */
+    margin: 0 auto; /* Center the image */
+    object-fit: cover; /* Maintain image aspect ratio */
+    margin-left: -6.9rem;
   }
 
   .about-pic {
@@ -193,19 +180,9 @@ about {
   }
 
   .aboutfacebooklogo {
-    margin: 1rem auto; /* Adjust space above the Facebook logo */
+    margin: -42rem auto; /* Further reduce space between elements */
     position: relative;
-  }
-}
-
-@media (min-width: 481px) {
-  .about-content {
-    flex-direction: row; /* Align text and image side by side */
-    justify-content: space-between; /* Space between text and image */
-  }
-
-  .about-pic {
-    margin-left: 2rem; /* Add margin to the left of the image */
-    margin-right: 0; /* Reset right margin */
+    margin-top: -3.5rem; /* Move up the Facebook logo further */
+    
   }
 }
