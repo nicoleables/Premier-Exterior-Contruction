@@ -231,7 +231,7 @@
     }
     
     .quote-box-container {
-      margin-left: -.5rem; /* Align paragraph to the left */
+      margin-left: 1rem; /* Align paragraph to the left */
       gap: 1.5rem; /* Space between boxes */
       margin-top: -5rem; /* Adjust margin */
     }
@@ -247,7 +247,7 @@
     }
   
     .red-box {
-      margin-left: -3rem;
+      margin-left: -2.5rem;
       width: 100px;
       height: 9rem;
     }
