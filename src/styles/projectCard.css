@@ -238,7 +238,7 @@
   }
 
   .projects-intro p::after {
-    width: 20%;
+    width: 50%;
     margin-left: -12rem;
     font-size: 2rem;
   }
