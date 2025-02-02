@@ -68,8 +68,11 @@
 }
 
 .aboutpic {
-  height: 30rem;
-  width: auto;
+  height: auto; /* Maintain aspect ratio */
+  width: 25rem; /* Use a fixed width or adjust as needed */
+  max-width: 700px; /* Prevent overflow */
+  object-fit: cover; /* Maintain image aspect ratio */
+  margin-top: 2rem; /* Add some space above the image */
 }
 
 .about-pic {
@@ -130,9 +133,8 @@
     width: 100%;
   }
 
-  .about-content {
+.about-content {
     width: 90%; /* Adjust width for responsiveness */
-    max-width: 480px; /* Prevent overflow */
     text-align: center; /* Center text */
   }
 
@@ -154,14 +156,10 @@
   }
 
   .aboutpic {
-    margin-top: -2rem; /* Further reduce top margin */
-    height: auto;
-    width: 25rem; /* Use percentage for responsive width */
-    max-width: 700px; /* Add max-width to prevent overflow */
-    padding: 0.5rem; /* Adjust padding */
-    margin-bottom: -1rem; /* Further reduce bottom margin */
-    margin: 0 auto; /* Center the image */
-    object-fit: cover; /* Maintain image aspect ratio */
+    display: block; /* Make the image a block element */
+    margin: 2rem auto; /* Center the image and add vertical spacing */
+    width: 100%; /* Make the image responsive */
+    max-width: 100%; /* Prevent overflow */
   }
 
   .about-pic {
@@ -176,5 +174,17 @@
     margin: -42rem auto; /* Further reduce space between elements */
     position: relative;
     margin-top: -3.5rem; /* Move up the Facebook logo further */
+  }
+}
+
+@media (min-width: 481px) {
+  .about-content {
+    flex-direction: row; /* Align text and image side by side */
+    justify-content: space-between; /* Space between text and image */
+  }
+
+  .aboutpic {
+    margin-left: 2rem; /* Add margin to the left of the image */
+    margin-right: 0; /* Reset right margin */
   }
 }
