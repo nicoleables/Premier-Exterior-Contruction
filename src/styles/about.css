@@ -172,23 +172,23 @@
   }
 
   .about-pic {
-    align-items: center;
+    align-items: center !important;
     margin-top: 0.5rem; /* Further reduce top margin */
     height: auto; /* Adjust height for responsiveness */
     font-size: 14px;
     padding: 0.5rem 1rem;
-    display: flex;
-    justify-content: center;
-    text-align: center;
+    display: flex !important;
+    justify-content: center !important;
+    text-align: center !important;
   }
 
   .aboutfacebooklogo {
     margin: 1rem auto; /* Adjust space between elements */
-    position: relative;
+    position: relative !important;
     margin-top: 1rem; /* Adjust top margin */
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
   }
 }
 
