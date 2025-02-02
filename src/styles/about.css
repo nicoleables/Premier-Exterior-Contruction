@@ -6,11 +6,9 @@
   overflow: hidden;
   padding: 2rem;
   box-sizing: border-box;
-  height: auto; 
-  margin-top: 4rem; /* Adjust height as needed to make the section taller */
+  margin: 4rem 0; /* Combined margin-top and margin-bottom */
   align-items: center; /* Center content horizontally */
   text-align: center; /* Center text content */
-  margin-bottom: 4rem;
 }
 
 .about-symbols {
@@ -28,7 +26,6 @@
   align-items: center;
   justify-content: center; /* Center content within the item */
   margin: 0 1rem; /* Use margin for spacing */
-  width: auto; /* Adjust width as needed */
   text-align: center;
 }
 
@@ -55,7 +52,6 @@
   flex-direction: column;
   justify-content: flex-start;
   width: 30%; /* Adjust width as needed */
-  height: 100%; /* Make content fill the height */
   text-align: left; /* Align text to the left */
 }
 
@@ -77,7 +73,6 @@
 }
 
 .about-pic {
-  top: 2rem;
   justify-content: flex-end;
   align-items: center;
   width: 50%; /* Ensure the image stays on the right */
@@ -94,6 +89,7 @@
   transform: scale(1.1);
 }
 
+/* Media Queries */
 @media (max-width: 768px) {
   .about-symbols {
     flex-wrap: wrap; /* Allow wrapping on smaller screens */
@@ -105,12 +101,11 @@
 }
 
 @media (max-width: 480px) {
-
   .about {
     text-align: center;
     margin-top: 1.5rem;
   }
-  
+
   .about-symbols {
     flex-direction: row; /* Ensure horizontal alignment */
     justify-content: center; /* Center symbols horizontally */
@@ -119,7 +114,6 @@
 
   .symbol-item {
     margin: 0.5rem; /* Adjust margin for smaller screens */
-    width: auto; /* Ensure width is responsive */
   }
 
   .symbol-text {
@@ -160,7 +154,7 @@
   }
 
   .aboutpic {
-    margin-top: -2rem !important; /* Further reduce top margin */
+    margin-top: -2rem; /* Further reduce top margin */
     height: auto;
     width: 25rem; /* Use percentage for responsive width */
     max-width: 700px; /* Add max-width to prevent overflow */
@@ -168,7 +162,6 @@
     margin-bottom: -1rem; /* Further reduce bottom margin */
     margin: 0 auto; /* Center the image */
     object-fit: cover; /* Maintain image aspect ratio */
-    margin-left: -6.9rem;
   }
 
   .about-pic {
@@ -183,6 +176,5 @@
     margin: -42rem auto; /* Further reduce space between elements */
     position: relative;
     margin-top: -3.5rem; /* Move up the Facebook logo further */
-    
   }
 }
