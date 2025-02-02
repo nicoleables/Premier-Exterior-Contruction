@@ -43,7 +43,7 @@
   display: flex;
   justify-content: space-between; /* Align text and image side by side */
   width: 100%;
-  margin-top: 3rem;
+  margin-top: 3rem; /* Adjust this if needed */
   align-items: center; /* Center content vertically */
 }
 
@@ -73,7 +73,7 @@
   width: 100%; /* Make the image responsive */
   max-width: 700px; /* Prevent overflow */
   object-fit: cover; /* Maintain image aspect ratio */
-  margin: 2rem auto; /* Center the image and add vertical spacing */
+  margin: 1rem auto; /* Center the image and reduce vertical spacing */
 }
 
 .about-pic {
@@ -82,7 +82,7 @@
 }
 
 .aboutfacebooklogo {
-  margin-top: 2rem;
+  margin-top: 1rem; /* Adjust this to reduce space above the logo */
   height: 80px;
   width: 80px;
 }
@@ -93,7 +93,6 @@
 
 /* Media Queries */
 @media (max-width: 768px) {
-
   .about {
     text-align: center; /* Center text */
   }
@@ -110,8 +109,9 @@
 
   .about-pic {
     width: 100%; /* Make the image full width on smaller screens */
-    margin: 2rem auto; /* Center the image and add vertical spacing */
+    margin: 1rem auto; /* Center the image and reduce vertical spacing */
   }
+
   .about-symbols {
     flex-wrap: wrap; /* Allow wrapping on smaller screens */
   }
@@ -151,7 +151,7 @@
     width: 100%;
   }
 
-.about-content {
+  .about-content {
     width: 90%; /* Adjust width for responsiveness */
     text-align: center; /* Center text */
   }
@@ -170,39 +170,11 @@
     font-size: 15px;
     width: 90%; /* Use percentage for responsive width */
     max-width: 340px;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem; /* Reduce bottom margin */
   }
 
   .aboutpic {
     display: block; /* Make the image a block element */
-    margin: 2rem auto; /* Center the image and add vertical spacing */
+    margin: 1rem auto; /* Center the image and reduce vertical spacing */
     width: 100%; /* Make the image responsive */
-    max-width: 100%; /* Prevent overflow */
-  }
-
-  .about-pic {
-    align-items: center;
-    margin-top: 0.5rem; /* Further reduce top margin */
-    height: auto; /* Adjust height for responsiveness */
-    font-size: 14px;
-    padding: 0.5rem 1rem;
-  }
-
-  .aboutfacebooklogo {
-    margin: -42rem auto; /* Further reduce space between elements */
-    position: relative;
-    margin-top: -3.5rem; /* Move up the Facebook logo further */
-  }
-}
-
-@media (min-width: 481px) {
-  .about-content {
-    flex-direction: row; /* Align text and image side by side */
-    justify-content: space-between; /* Space between text and image */
-  }
-
-  .about-pic {
-    margin-left: 2rem; /* Add margin to the left of the image */
-    margin-right: 0; /* Reset right margin */
-  }
-}
+    max-width: 100
