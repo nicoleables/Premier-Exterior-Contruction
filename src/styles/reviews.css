@@ -213,14 +213,10 @@
 }
 
 @media (max-width: 480px) {
-  .review-intro {
-    margin-left:-1.4rem;
-  }
-
-  .review-intro h1 {
+ .review-intro h1 {
+  margin-left: 8px;
+  margin-right: 8px;
     font-size: 13px;
-    margin-right: 1rem:
-    margin-left: 1rem;
   }
   
   .reviewbtn { 
