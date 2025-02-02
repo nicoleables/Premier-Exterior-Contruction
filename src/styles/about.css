@@ -131,7 +131,7 @@
 
   .content-container {
     flex-direction: column; /* Stack text and image vertically */
-    align-items: center; /* Center content horizontally */
+    align-items: center !important; /* Center content horizontally */
     width: 100%;
   }
 
