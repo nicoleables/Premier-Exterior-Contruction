@@ -1,4 +1,4 @@
-.about {
+about {
   display: flex;
   flex-direction: column; /* Stack symbols and content vertically */
   background-color: black;
@@ -6,9 +6,11 @@
   overflow: hidden;
   padding: 2rem;
   box-sizing: border-box;
-  margin: 4rem 0; /* Combined margin-top and margin-bottom */
+  height: auto; 
+  margin-top: 4rem; /* Adjust height as needed to make the section taller */
   align-items: center; /* Center content horizontally */
   text-align: center; /* Center text content */
+  margin-bottom: 4rem;
 }
 
 .about-symbols {
@@ -26,6 +28,7 @@
   align-items: center;
   justify-content: center; /* Center content within the item */
   margin: 0 1rem; /* Use margin for spacing */
+  width: auto; /* Adjust width as needed */
   text-align: center;
 }
 
@@ -43,7 +46,7 @@
   display: flex;
   justify-content: space-between; /* Align text and image side by side */
   width: 100%;
-  margin-top: 2rem; /* Adjust this to reduce space */
+  margin-top: 3rem;
   align-items: center; /* Center content vertically */
 }
 
@@ -52,6 +55,7 @@
   flex-direction: column;
   justify-content: flex-start;
   width: 30%; /* Adjust width as needed */
+  height: 100%; /* Make content fill the height */
   text-align: left; /* Align text to the left */
 }
 
@@ -68,21 +72,20 @@
 }
 
 .aboutpic {
-  display: block; /* Make the image a block element */
-  height: auto; /* Maintain aspect ratio */
-  width: 100%; /* Make the image responsive */
-  max-width: 700px; /* Prevent overflow */
-  object-fit: cover; /* Maintain image aspect ratio */
-  margin: 1rem auto; /* Center the image and reduce vertical spacing */
+  height: 30rem;
+  width: auto;
 }
 
 .about-pic {
+  top: 2rem;
+  justify-content: flex-end;
+  align-items: center;
   width: 50%; /* Ensure the image stays on the right */
-  margin-right: 2rem; /* Add margin to the right of the image */
+  margin-right: 2rem;
 }
 
 .aboutfacebooklogo {
-  margin-top: 1rem; /* Adjust this to reduce space above the logo */
+  margin-top: 2rem;
   height: 80px;
   width: 80px;
 }
@@ -90,6 +93,7 @@
 .aboutfacebooklogo:hover {
   transform: scale(1.1);
 }
+
 
 /* Media Queries */
 @media (max-width: 768px) {
