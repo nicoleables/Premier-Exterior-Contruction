@@ -37,7 +37,7 @@
     flex-direction: column; /* Stack items vertically */
     align-items: center; /* Center items horizontally */
     text-align: center;
-    margin-bottom: 20rem; /* Use negative value to move it closer */
+    margin-bottom: 25rem; /* Use negative value to move it closer */
   }
   
   .book-text h1 {
@@ -196,6 +196,7 @@
 
   @media (max-width: 420px) {
     .book h1 {
+      margin-top: 5rem;
       font-size: 2rem;
     }
   
@@ -282,9 +283,6 @@
       margin-top: 36rem; /* Increase margin-top for even skinnier screens */
     }
 
-      .booko h1 {
-          margin-top: 5rem;
-  }
 
   @media (min-device-width: 428px) and (max-device-width: 430px) and (min-device-height: 926px) and (max-device-height: 932px) and (-webkit-min-device-pixel-ratio: 3) {
     .quote-section {
