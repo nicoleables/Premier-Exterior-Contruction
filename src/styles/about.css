@@ -158,7 +158,7 @@
     margin-bottom: 2rem;
   }
 
-.aboutpic {
+  .aboutpic {
     margin-top: 1rem !important;
     height: auto;
     width: 80%; /* Use percentage for responsive width */
@@ -171,7 +171,7 @@
     text-align: center;
   }
 
-.about-pic {
+  .about-pic {
     align-items: center;
     margin-top: 0.5rem; /* Further reduce top margin */
     height: auto; /* Adjust height for responsiveness */
@@ -180,8 +180,7 @@
     display: flex;
     justify-content: center;
     text-align: center;
-}
-
+  }
 
   .aboutfacebooklogo {
     margin: 1rem auto; /* Adjust space between elements */
@@ -192,3 +191,4 @@
     align-items: center;
   }
 }
+
