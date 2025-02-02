@@ -131,7 +131,7 @@
 
   .content-container {
     flex-direction: column; /* Stack text and image vertically */
-    align-items: center !important; /* Center content horizontally */
+    align-items: center; /* Center content horizontally */
     width: 100%;
   }
 
@@ -161,22 +161,22 @@
   .aboutpic {
     margin-top: 1rem !important;
     height: auto;
-    width: 80%; /* Use percentage for responsive width */
-    max-width: 480px; /* Add max-width to prevent overflow */
-    padding: 0.5rem; /* Adjust padding */
-    margin-bottom: 1rem; /* Adjust bottom margin */
-    margin: 0 auto; /* Center the image */
-    object-fit: cover; /* Maintain image aspect ratio */
-    display: block;
+    width: 80% !important; /* Use percentage for responsive width */
+    max-width: 480px !important; /* Add max-width to prevent overflow */
+    padding: 0.5rem !important; /* Adjust padding */
+    margin-bottom: 1rem !important; /* Adjust bottom margin */
+    margin: 0 auto !important; /* Center the image */
+    object-fit: cover;
+    display: block !important;
     text-align: center !important;
   }
 
   .about-pic {
     align-items: center !important;
-    margin-top: 0.5rem; /* Further reduce top margin */
-    height: auto; /* Adjust height for responsiveness */
-    font-size: 14px;
-    padding: 0.5rem 1rem;
+    margin-top: 0.5rem !important; /* Further reduce top margin */
+    height: auto !important; /* Adjust height for responsiveness */
+    font-size: 14px !important;
+    padding: 0.5rem 1rem !important;
     display: flex !important;
     justify-content: center !important;
     text-align: center !important;
@@ -191,4 +191,5 @@
     align-items: center;
   }
 }
+
 
