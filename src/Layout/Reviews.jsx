@@ -38,7 +38,7 @@ const Reviews = () => {
           <div className="stars">⭐⭐⭐⭐⭐</div>
           <p>{reviews[currentSlide]}</p>
         </div>
-        <button className="arrow right-arrow" onClick={nextSlide}>➡</button>
+        <button className="arrow right-arrow" onClick={nextSlide}>⮕</button>
       </div>
       <div className="leavereviewbox">
         <div className="review-container">
