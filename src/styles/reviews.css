@@ -43,6 +43,8 @@
   font-size: 1.2rem; /* Adjust as needed */
   margin-bottom: 3rem;
   padding-left: 1rem;
+  margin-top: 1rem;
+
 }
 
 .review-intro p {
@@ -216,7 +218,8 @@
  .review-intro h1 {
   margin-left: 8px;
   margin-right: 8px;
-    font-size: 13px;
+  font-size: 13px;
+  margin-top: 1rem;
   }
   
   .reviewbtn { 
@@ -226,7 +229,7 @@
     left: 14.5rem; /* Ensure button is centered */ 
     top: -50px; /* Adjust top position */ 
     transform: translateX(0); 
-    width: 8.1rem;
+    width: 9.5rem;
     padding: .7rem 1rem;
 
   }
@@ -242,7 +245,7 @@
   }
 
   .review-box {
-    margin-top: -5rem;
+    margin-top: -3rem;
     width: 80%; /* Adjust width */
     height: 400px; /* Adjust height */
   }
