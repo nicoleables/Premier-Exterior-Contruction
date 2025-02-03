@@ -29,7 +29,7 @@ const Reviews = () => {
         <h1>TAKE A LOOK FOR YOURSELF ON WHAT YOUR NEIGHBORS ARE SAYING ABOUT US.</h1>
         <p>REVIEWS</p>
         <a href="https://www.facebook.com/profile.php?id=100089862015650" target="_blank" rel="noopener noreferrer">
-        <button className="reviewbtn">SEE ALL REVIEWS ⮕</button>
+        <button className="reviewbtn">SEE ALL REVIEWS 🠮</button>
         </a>
       </div>
       <div className="review-slides">
