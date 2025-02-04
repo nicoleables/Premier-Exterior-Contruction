@@ -4,7 +4,7 @@ import "../styles/questions.css";
 import "../styles/global.css";
 import questionsimg from "../assets/questions/images/questionsimg.jpg";
 
-const Book = () => {
+const Questions = () => {
   const [showAnswer, setShowAnswer] = useState({});
 
   const toggleAnswer = (question) => {
@@ -47,4 +47,4 @@ const Book = () => {
   );
 }
 
-export default Book;
+export default Questions;
