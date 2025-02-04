@@ -33,12 +33,12 @@ const Reviews = () => {
         </a>
       </div>
       <div className="review-slides">
-        <button className="arrow left-arrow" onClick={prevSlide}>←</button>
+        <button className="arrow left-arrow" onClick={prevSlide}>🡄</button>
         <div className="review-box">
           <div className="stars">⭐⭐⭐⭐⭐</div>
           <p>{reviews[currentSlide]}</p>
         </div>
-        <button className="arrow right-arrow" onClick={nextSlide}>→</button>
+        <button className="arrow right-arrow" onClick={nextSlide}>🡆</button>
       </div>
       <div className="leavereviewbox">
         <div className="review-container">
