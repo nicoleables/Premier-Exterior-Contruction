@@ -1,7 +1,7 @@
 .questions {
   display: flex;
   justify-content: space-between; /* Space between the text and image */
-  align-items: flex-start; /* Align items to the top */
+  align-items: flex-start; 
   background-color: black;
   color: white;
   padding: 2rem;
