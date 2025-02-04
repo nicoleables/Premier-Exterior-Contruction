@@ -1,7 +1,6 @@
 // eslint-disable-next-line no-unused-vars
 import React, { useState } from "react";
 import "../styles/questions.css";
-import "../styles/reviews.css";
 import "../styles/global.css";
 import questionsimg from "../assets/questions/images/questionsimg.jpg";
 
