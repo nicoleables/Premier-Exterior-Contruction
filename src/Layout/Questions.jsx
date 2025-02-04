@@ -15,33 +15,34 @@ const Questions = () => {
     <div className="questions">
       <div className="question-text-container">
         <div className="question-text">
-          <h1>Frequently asked questions</h1>
+          <h1>Frequently Asked Questions</h1>
           <span>
             <div className="question-item">
-              <p className="qestimate">Is there a charge for getting an estimate from Premier Exterior Construction?
+              <p className="qestimate">
+                Is there a charge for getting an estimate from Premier Exterior Construction?
                 <button onClick={() => toggleAnswer('qestimate')} className="toggle-btn">+</button>
               </p>
               {showAnswer.qestimate && <div className="answer">No, we provide free estimates for all of our welding services.</div>}
             </div>
             <div className="question-item">
-              <p className="companies">How is Premier Exterior Construction different from other welding companies in the area?
+              <p className="companies">
+                How is Premier Exterior Construction different from other welding companies in the area?
                 <button onClick={() => toggleAnswer('companies')} className="toggle-btn">+</button>
               </p>
-              {showAnswer.companies && <div className="answer">Premier Exterior Construction stands out from the competition with our 
-              highly skilled team of certified welders, state-of-the-art equipment, and commitment to quality craftsmanship on every project.</div>}
+              {showAnswer.companies && <div className="answer">Premier Exterior Construction stands out from the competition with our highly skilled team of certified welders, state-of-the-art equipment, and commitment to quality craftsmanship on every project.</div>}
             </div>
             <div className="question-item">
-              <p className="qservices">What services do you provide?
+              <p className="qservices">
+                What services do you provide?
                 <button onClick={() => toggleAnswer('qservices')} className="toggle-btn">+</button>
               </p>
-              {showAnswer.qservices && <div className="answer">Premier Exterior Construction provides a wide range of welding services, including 
-              structural welding, metal fabrication, pipe welding, and custom metal projects.</div>}
+              {showAnswer.qservices && <div className="answer">Premier Exterior Construction provides a wide range of welding services, including structural welding, metal fabrication, pipe welding, and custom metal projects.</div>}
             </div>
           </span>
         </div>
       </div>
       <div className="question-img">
-        <img className="question-image" src={questionsimg} alt="question Image" />
+        <img className="question-image" src={questionsimg} alt="Question Image" />
       </div>
     </div>
   );
