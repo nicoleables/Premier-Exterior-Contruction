@@ -1,5 +1,5 @@
 // eslint-disable-next-line no-unused-vars
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import { useSwipeable } from "react-swipeable";
 import "../styles/global.css";
 import "../styles/reviews.css";
@@ -8,6 +8,9 @@ import facebook from "../assets/footer/images/footerfacebooklogo.png";
 
 const Reviews = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
+  const startX = useRef(0);
+  const endX = useRef(0);
+
   const reviews = [
     "Premier Exterior is HIGHLY recommended! Premier was great to deal with. They took the time to explain everything and then delivered on everything they said they would. Ricky was always available to answer questions or address concerns and did a great job letting us know when everything would be scheduled.",
     "Ricky and his crew are the best! Honest, hard-working, and most of all very personable, reliable, and affordable. I would highly recommend them. They do beautiful work. You will be very happy you chose them!!",
@@ -28,8 +31,26 @@ const Reviews = () => {
     onSwipedRight: prevSlide
   });
 
+  const handleMouseDown = (event) => {
+    startX.current = event.clientX;
+  };
+
+  const handleMouseUp = (event) => {
+    endX.current = event.clientX;
+    if (startX.current - endX.current > 50) {
+      nextSlide();
+    } else if (endX.current - startX.current > 50) {
+      prevSlide();
+    }
+  };
+
   return (
-    <div className="reviews" {...handlers}>
+    <div 
+      className="reviews"
+      {...handlers}
+      onMouseDown={handleMouseDown}
+      onMouseUp={handleMouseUp}
+    >
       <img className="review-image" src={reviewimg} alt="review Image" />
       <div className="review-intro">
         <h1>TAKE A LOOK FOR YOURSELF ON WHAT YOUR NEIGHBORS ARE SAYING ABOUT US.</h1>
