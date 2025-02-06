@@ -11,6 +11,7 @@ import local from "../assets/aboutus/images/localpic.png";
 const About = () => {
   return (
     <div className="about">
+      <div className="about-content-section">
       <div className="about-symbols">
         <div className="symbol-item">
           <img src={insured} alt="insured" className="symbol-image" />
@@ -40,6 +41,7 @@ const About = () => {
         <a href="https://www.facebook.com/profile.php?id=100089862015650" target="_blank" rel="noopener noreferrer" className="facebook-link">
           <img src={facebook} alt="logo" className="aboutfacebooklogo" />
         </a>
+        </div>
       </div>
     </div>
   );
