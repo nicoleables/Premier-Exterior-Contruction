@@ -108,6 +108,11 @@
     text-align: center;
     margin-top: 1rem;
   }
+
+  .about-section-content {
+    margin-top: -2rem;
+    margin-bottom: 1rem;
+}
   
   .about-symbols {
     flex-direction: row; /* Ensure horizontal alignment */
