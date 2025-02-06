@@ -125,22 +125,6 @@
     width: 20rem;
   }
 
-  .aboutpic {
-    margin-top: 22rem;
-    height: auto;
-    width: 22rem;
-    margin-right: -.2rem;
-    padding: 0.8rem;
-  }
-
-  .about  {
-    text-align: center;
-    margin-top: 3rem;
-    height: 60rem;
-    font-size: 14px;
-    padding: 0.5rem 1rem;
-  }
-
   .facebooklogo {
     align-items: center;
     margin-left: 8rem;
