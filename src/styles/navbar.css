@@ -39,7 +39,6 @@
   color: black;
 }
 
-/* Media queries for responsiveness */
 @media (max-width: 768px) {
   .header {
     height: 5rem; /* Adjust header height for smaller screens */
@@ -80,6 +79,18 @@
   .navbar a, .nav-link {
     padding: 0rem; /* Adjust padding for smaller screens */
     font-size: 0.5rem; /* Adjust font size for smaller screens */
+  }
+
+  /* Ensure that the content doesn't overflow */
+  .content, .content-container, .review-slides, .review-box {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  .review-box {
+    width: 90%; /* Adjust width to fit the screen */
+    margin: 0 auto; /* Center the review box */
   }
 }
 
