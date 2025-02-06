@@ -7,7 +7,7 @@
   padding: 2rem;
   box-sizing: border-box;
   height: auto; 
-  margin-top: 4rem; /* Adjust height as needed to make the section taller */
+  margin-top: 2rem; /* Adjust height as needed to make the section taller */
   align-items: center; /* Center content horizontally */
   text-align: center; /* Center text content */
   margin-bottom: 4rem;
@@ -106,7 +106,7 @@
 @media (max-width: 480px) {
   .about {
     text-align: center;
-    margin-top: 1.5rem;
+    margin-top: 1rem !important;
   }
   
   .about-symbols {
