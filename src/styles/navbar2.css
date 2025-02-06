@@ -70,7 +70,7 @@
   }
   .header-logo {
     max-width: 80px; /* Adjust logo size */
-    margin-left: .1rem; /* Move logo towards the top-left corner */
+    margin-left: 0.1rem; /* Move logo towards the top-left corner */
   }
   .navbar2 {
     flex-direction: column;
@@ -81,6 +81,18 @@
     padding: 0rem; /* Adjust padding for smaller screens */
     font-size: 0.5rem; /* Adjust font size for smaller screens */
   }
+
+  /* Ensure content doesn't overflow */
+  .content, .content-container, .review-slides, .review-box {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  .review-box {
+    width: 90%; /* Adjust width to fit the screen */
+    margin: 0 auto; /* Center the review box */
+  }
 }
 
 @media (min-width: 769px) {
@@ -89,5 +101,3 @@
     justify-content: flex-end; /* Move nav items to the right */
   }
 }
-  
- 
