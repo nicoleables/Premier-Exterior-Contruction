@@ -321,7 +321,7 @@
   justify-content: center; /* Center the plus sign horizontally */
   align-items: center; /* Center the plus sign vertically */
   position: absolute; /* Position absolutely */
-  top: 50%; /* Vertically center */
+  top: 38.5%; /* Vertically center */
   right: 0; /* Align to the right of the container */
   transform: translateY(-50%); /* Adjust for perfect vertical centering */
 }
