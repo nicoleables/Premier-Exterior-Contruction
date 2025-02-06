@@ -106,7 +106,7 @@
 @media (max-width: 480px) {
   .about {
     text-align: center;
-    margin-top: 1rem !important;
+    margin-top: 1rem;
   }
   
   .about-symbols {
