@@ -75,6 +75,8 @@
     flex-direction: column;
     align-items: flex-start;
     padding: 0.1rem 0;
+    margin-left: -2rem;
+
   }
   .navbar a, .nav-link {
     padding: 0rem; /* Adjust padding for smaller screens */
@@ -98,5 +100,6 @@
   .navbar {
     flex-direction: row; /* Display nav items side by side on larger screens */
     justify-content: flex-end; /* Move nav items to the right */
+    margin-left: -2rem;
   }
 }
