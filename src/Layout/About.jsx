@@ -2,8 +2,8 @@
 import React from "react";
 import "../styles/about.css";
 import "../styles/global.css";
-import aboutpic from '../assets/aboutus/images/aboutpic.webp';
-import facebook from '../assets/aboutus/images/facebook.png';
+import image from "../assets/aboutus/images/aboutpic.jpg";
+import facebook from "../assets/aboutus/images/facebook.png";
 import insured from "../assets/aboutus/images/insuredpic.png";
 import hands from "../assets/aboutus/images/handspic.png";
 import local from "../assets/aboutus/images/localpic.png";
@@ -11,7 +11,6 @@ import local from "../assets/aboutus/images/localpic.png";
 const About = () => {
   return (
     <div className="about">
-      <div className="about-content-section">
       <div className="about-symbols">
         <div className="symbol-item">
           <img src={insured} alt="insured" className="symbol-image" />
@@ -30,17 +29,20 @@ const About = () => {
         <div className="about-content">
           <h1>ABOUT US</h1>
           <p>
-            At Premier Exterior Construction, we are a team of skilled welders serving Goldthwaite, Texas, and surrounding areas. With our expertise in welding, we are dedicated to providing top-quality exterior construction services for residential and commercial projects. Our commitment to customer satisfaction and attention to detail sets us apart in the industry.
+          At Premier Exterior Construction, we are a skilled and experienced construction team proudly serving Goldthwaite, Texas, 
+          and the surrounding areas. We specialize in a wide range of exterior construction services for both residential and commercial 
+          properties — from doors and windows to decks, patios, roofing repairs, and more.
+
+          Our team is committed to quality craftsmanship, clear communication, and dependable service on every project, no matter the size. We take pride in our attention to detail and our dedication to customer satisfaction, delivering durable, functional, and visually appealing results you can trust.
           </p>
+          <div className="facebook-logo">
+            <a href="https://www.facebook.com/profile.php?id=100089862015650" target="_blank" rel="noopener noreferrer" className="facebook-link">
+              <img src={facebook} alt="logo" className="facebooklogo" />
+            </a>
+          </div>
         </div>
         <div className="about-pic">
-          <img src={aboutpic} alt="about pic" className="aboutpic" />
-        </div>
-      </div>
-      <div className="facebook-logo">
-        <a href="https://www.facebook.com/profile.php?id=100089862015650" target="_blank" rel="noopener noreferrer" className="facebook-link">
-          <img src={facebook} alt="logo" className="aboutfacebooklogo" />
-        </a>
+          <img src={image} alt="about pic" className="aboutpic" />
         </div>
       </div>
     </div>
@@ -48,5 +50,3 @@ const About = () => {
 }
 
 export default About;
-
-
