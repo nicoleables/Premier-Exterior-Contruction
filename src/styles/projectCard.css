@@ -1,0 +1,201 @@
+/* ================= PROJECT SECTION ================= */
+
+.project {
+  color: white;
+  background-color: black;
+  margin-bottom: 5rem;
+}
+
+/* ---------- INTRO ---------- */
+
+.projects-intro {
+  width: 100%;
+  padding: 2rem 0;
+  display: flex;
+  flex-direction: column;
+  background-color: black;
+  color: white;
+}
+
+.projects-intro h1 {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  padding-left: 2rem;
+}
+
+.projects-intro p {
+  padding-left: 2rem;
+  font-size: 3.1rem;
+  position: relative;
+  display: inline-block;
+}
+
+.projects-intro p::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 100%;
+  width: 160px;
+  height: 2px;
+  background-color: rgb(164, 0, 0);
+  margin-left: 1rem;
+}
+
+/* ---------- BUTTON ---------- */
+
+.projectbtn {
+  background-color: white;
+  color: black;
+  font-weight: bold;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: transform 0.3s ease;
+  margin-left: 2rem;
+}
+
+.projectbtn:hover {
+  transform: scale(1.1);
+}
+
+/* ---------- GRID (DESKTOP: 3 - 2 - 3) ---------- */
+
+.project-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.project-container ul {
+  list-style: none;
+  padding: 0;              /* ✅ FIXES RIGHT SHIFT */
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+
+  max-width: 960px;
+  width: 100%;
+
+  justify-items: center;
+  align-items: center;
+}
+
+.project-container li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Center middle row (3-2-3) */
+.project-container li:nth-child(4) {
+  grid-column: 2;
+}
+
+.project-container li:nth-child(5) {
+  grid-column: 3;
+}
+
+/* 🔹 NUDGE MIDDLE ROW LEFT (DESKTOP ONLY) */
+.project-container li:nth-child(4),
+.project-container li:nth-child(5) {
+  transform: translateX(-10rem);
+}
+
+
+.projecticons {
+  width: 230px;
+  height: 220px;
+}
+
+/* ================= TABLET ================= */
+
+@media (max-width: 768px) {
+
+  .projectbtn {
+    background-color: white;
+    color: black;
+    font-weight: bold;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: transform 0.3s ease;
+    margin-left: .2rem;
+  }
+
+  .projects-intro {
+    text-align: center;
+    align-items: center;
+    padding: 2rem 1rem;
+  }
+
+  .projects-intro h1 {
+    padding-left: 0;
+    font-size: 1rem;
+  }
+
+  .projects-intro p {
+    padding-left: 0;
+    font-size: 2rem;
+  }
+
+  .projects-intro p::after {
+    display: none;
+  }
+
+  .project-container ul {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
+    max-width: 398px;
+    margin: 0 auto;
+  }
+
+  .projecticons {
+    width: 120px;
+    height: 120px;
+  }
+
+  /* 🔹 NUDGE MIDDLE ROW LEFT (DESKTOP ONLY) */
+.project-container li:nth-child(4),
+.project-container li:nth-child(5) {
+  transform: translateX(-3.8rem);
+}
+
+}
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 480px) {
+
+  .project-container {
+    display: flex;
+    justify-content: center;
+  }
+
+  .project-container ul {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+
+    width: fit-content;
+    margin: 0 auto;
+
+    justify-items: center;
+    align-items: center;
+  }
+
+  .projecticons {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+
+
+
+
+

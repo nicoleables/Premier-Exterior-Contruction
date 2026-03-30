@@ -1,0 +1,325 @@
+.reviews {
+  color: white;
+  text-align: center;
+  margin: 2rem auto;
+  padding-top: 0;
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  overflow: hidden;
+  font-weight: bold;
+}
+
+.review-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(30%);
+  z-index: -1;
+}
+
+.review-intro {
+  max-width: 1400px;
+  margin: 0 auto;
+  align-items: center;
+  text-align: center;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  color: white;
+  margin-bottom: 1.2rem;
+}
+
+.review-intro h1 {
+  font-size: 1.2rem;
+  margin-bottom: 3rem;
+  padding-left: 1rem;
+  margin-top: 1rem;
+}
+
+.review-intro p {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  display: inline-block;
+  position: relative;
+  left: 1.5rem;
+}
+
+.review-intro p::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 100%;
+  width: 20rem;
+  height: 2px;
+  background-color: rgb(164, 0, 0);
+  margin-left: 1.3rem;
+}
+
+.reviewbtn {
+  background-color: white;
+  color: black;
+  font-weight: bold;
+  border: none;
+  padding: 0.75rem 1.8rem;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: transform 0.3s ease;
+  position: relative;
+  top: -60px;
+  margin-left: 32.6rem;
+}
+
+.reviewbtn:hover {
+  transform: scale(1.1);
+}
+
+.review-slides {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+  margin: 2rem 0;
+  transform: translateY(-20px);
+}
+
+.review-box {
+  background-color: #fff;
+  padding: 1rem;
+  margin: 0 1rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.review-box p {
+  color: black;
+  overflow-y: auto;
+}
+
+.stars {
+  color: yellow;
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.arrow {
+  background: rgb(164, 0, 0);
+  border: none;
+  font-size: 2.5rem;
+  cursor: pointer;
+  color: white;
+  transition: color 0.3s;
+  outline: none;
+}
+
+.arrow:focus {
+  outline: 3px solid rgb(164, 0, 0);
+}
+
+.left-arrow {
+  position: absolute;
+  left: 0;
+}
+
+.right-arrow {
+  position: absolute;
+  right: 0;
+}
+
+.leavereviewbox {
+  display: flex;
+  justify-content: center;
+  height: 20%;
+  width: 30%;
+  padding: 10px;
+  background-color: black;
+  align-content: center;
+  box-sizing: border-box;
+  border: 1px solid white;
+}
+
+.review-container {
+  align-content: center;
+}
+
+.facebook-review {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.facebook-link {
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  align-items: center;
+}
+
+.reviewfacebook-logo {
+  margin-top: 1rem;
+  height: 50px;
+}
+
+.review-call-to-action {
+  text-decoration: none;
+  color: inherit;
+  margin-top: 1rem;
+  width: 80%;
+  height: 3.2rem;
+  align-content: center;
+  background-color: rgb(164, 0, 0);
+}
+
+.review-call-to-action a {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.review-call-to-action p {
+  margin: 0;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  color: white;
+  transition: color 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+@media (max-width: 480px) {
+  .review-intro {
+    flex-direction: column;   /* Stack items vertically */
+    align-items: center;      /* Center everything */
+    text-align: center;       /* Center text */
+    padding: 0 1rem;
+  }
+
+  .review-intro h1 {
+    width: 100%;
+    font-size: 14px;
+    margin: 2rem 0 1rem 0;
+  }
+
+  .review-intro p {
+    font-size: 1.5rem;
+    margin: 0.5rem 0;        /* Space above and below */
+    position: static;        /* Remove relative positioning */
+    display: block;          /* Make it a block for proper centering */
+    width: 100%;             /* Take full width */
+    text-align: center;      /* Center the text */
+  }
+
+  .review-intro p::after {
+    display: none;           /* Hide the red line */
+  }
+
+  .reviewbtn {
+    margin: 0.5rem 0 0 0;    /* Button below the text */
+    width: auto;
+    padding: 0.7rem 1rem;
+    font-size: 0.9rem;
+    position: relative;
+    top: 0;
+    left: 0;
+  }
+
+  .review-box {
+    width: 90%;
+    height: 300px;
+  }
+
+  .stars {
+    font-size: 1rem;
+  }
+
+  .arrow {
+    font-size: 1.1rem;
+  }
+
+  .review-call-to-action{
+    width: 10rem;
+  }
+
+  .leavereviewbox {
+    margin-bottom: 1rem;
+    width: 15rem;
+  }
+}
+
+/* ================= Tablet / Foldable breakpoint ================= */
+@media (max-width: 1024px) {
+  .review-intro {
+    flex-direction: column;   /* Stack vertically */
+    align-items: center;      /* Center all items */
+    text-align: center;       /* Center text */
+    padding: 0 2rem;          /* Give some side padding */
+  }
+
+  .review-intro h1 {
+    width: 100%;
+    font-size: clamp(1rem, 1.2vw, 1.4rem);
+    margin: 0.5rem 0 1rem 0;
+  }
+
+  .review-intro p {
+    font-size: 1.8rem;
+    margin: 0.5rem 0;
+    position: static;
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+
+  .review-intro p::after {
+    display: none;           /* Remove red line for smaller screens */
+  }
+
+  .reviewbtn {
+    margin: 0.5rem 0 1rem 0; /* Button below REVIEWS */
+    width: auto;
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    position: relative;
+    top: 0;
+    left: 0;
+  }
+
+  .review-box {
+    width: 90%;
+    max-width: 500px;
+    height: auto;            /* Let it adjust for readability */
+  }
+
+  .stars {
+    font-size: 1.2rem;
+  }
+
+  .arrow {
+    font-size: 1.5rem;
+  }
+}
+
+
+
+

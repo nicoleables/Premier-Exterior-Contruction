@@ -1,0 +1,128 @@
+.questions {
+    display: flex;
+    justify-content: space-between; /* Space between the text and image */
+    align-items: flex-start; /* Align items to the top */
+    background-color: black;
+    color: white;
+    padding: 2rem;
+    margin-bottom: 4rem;
+    margin-top: 4rem;
+  }
+  
+  .question-text-container {
+    width: 50%; /* Adjust width as needed */
+    text-align: left;
+  }
+  
+  .question-text h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+  }
+  
+  .question-item {
+    position: relative; /* Required for absolute positioning of the button */
+    margin-bottom: 1rem;
+    border-bottom: 1px solid #ccc; /* Add bottom border */
+  }
+
+  .question-item:last-child { 
+    border-bottom: none; /* Remove border from the last item */ 
+}
+
+  
+.question-text span p {
+  font-weight: bold;
+  margin-top: 3rem;
+  font-size: 1.4rem;
+  margin-bottom: 1rem; /* reduce to avoid big jumps */
+  padding-right: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+  
+.toggle-btn {
+  position: static; /* 🔥 THIS STOPS THE JUMP */
+  transform: none;
+
+  color: white;
+  background-color: red;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0; /* prevents squeezing */
+}
+
+  
+.answer {
+  margin-bottom: 1.3rem;
+  margin-top: 0.5rem;
+  font-size: 1.2rem;
+  color: white;
+}
+
+  
+  .question-img {
+    width: 40%; /* Adjust width as needed */
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  .question-image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+
+  @media (max-width: 900px) {
+    /* Remove the image completely */
+    .question-img {
+      display: none;
+    }
+  
+    /* Let text take full width */
+    .question-text-container {
+      width: 100%;
+    }
+  
+    /* Center everything */
+    .question-text {
+      text-align: center;
+    }
+  
+    .question-text h1 {
+      text-align: center;
+    }
+  
+    /* Center questions + keep button usable */
+    .question-text span p {
+      justify-content: center;
+      text-align: center;
+    }
+  
+    /* Space button slightly from text */
+    .toggle-btn {
+      margin-left: 0.75rem;
+    }
+  
+    /* Center answers */
+    .answer {
+      text-align: center;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+  
+  
+  
+  
