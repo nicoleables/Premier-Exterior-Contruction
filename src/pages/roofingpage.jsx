@@ -1,7 +1,6 @@
 /* eslint-disable react/no-unescaped-entities */
 /* eslint-disable no-unused-vars */
 import React, { useState } from 'react';
-import emailjs from 'emailjs-com';
 import Reviews from '../Layout/Reviews.jsx';
 import Book from '../Layout/Book.jsx';
 import Footer from '../components/Footer.jsx'; 
@@ -13,7 +12,7 @@ import Roof from "../assets/services/images/roofing.jpg";
 const RoofPage = () => {
   const [modalOpen, setModalOpen] = useState(false);
   const [formSubmitted, setFormSubmitted] = useState(false);
-  const [errMessage, setErrorMessage] = useState("");
+  const [errMessage, setErrorMessage] = useState(""); // ✅ state setter
 
   const openModal = () => setModalOpen(true);
   const closeModal = () => {
@@ -22,65 +21,46 @@ const RoofPage = () => {
     setErrorMessage("");
   };
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
+    setErrorMessage("");       // ✅ clear previous errors
+    setFormSubmitted(false);   // ✅ reset submission state
+
     const formData = new FormData(event.target);
-  
-    // Extract individual values from the form data
-    const fullName = formData.get("fullName");
-    const phoneNumber = formData.get("phoneNumber");
-    const email = formData.get("email");
-    const address = formData.get("address");
-    const preferredDate = formData.get("preferredDate");
-    const services = Array.from(formData.entries())
-      .filter(([key, value]) => key.startsWith("service") && value)
-      .map(([, value]) => value)
-      .join(", ");
-    const help = formData.get("help");
-  
-    if (!fullName || !phoneNumber || !email || !address || !preferredDate || !help) {
-      setErrorMessage("Please fill in all required fields.");
+
+    // Basic validation for required fields
+    const fullName = formData.get("fullName").trim();
+    const phoneNumber = formData.get("phoneNumber").trim();
+
+    if (!fullName || !phoneNumber) {
+      setErrorMessage("Please enter your name and phone number.");
       return;
     }
-  
-    // Ensure the date is valid before formatting
-    if (preferredDate) {
-      const date = new Date(preferredDate);
-      const formattedDate = `${date.getMonth() + 1}/${date.getDate()}/${date.getFullYear()}`;
-  
-      // Create a templateParams object for EmailJS
-      const templateParams = {
-        fullName,
-        phoneNumber,
-        email,
-        address,
-        preferredDate: formattedDate, // Use the formatted date here
-        services,
-        help,
-      };
-  
-      // Log the template parameters to ensure they are correct
-      console.log('Sending templateParams:', templateParams);
-  
-      emailjs.send("service_vaqr1un", "template_4yrub3r", templateParams, "KMzz-w9adu3bolNiq")
-        .then((response) => {
-          console.log('SUCCESS!', response.status, response.text);
-          setFormSubmitted(true);
-        })
-        .catch((error) => {
-          console.error('FAILED...', error); // Log the error details
-          setErrorMessage("Failed to send message. Please try again.");
-        });
-  
-      event.target.reset();
-    } else {
-      setErrorMessage("Invalid date provided.");
+
+    try {
+      const response = await fetch("https://formspree.io/f/xnjopeqk", {
+        method: "POST",
+        headers: { Accept: "application/json" },
+        body: formData,
+      });
+
+      if (response.ok) {
+        setFormSubmitted(true);
+        event.target.reset(); // clear form
+      } else {
+        const data = await response.json();
+        setErrorMessage(data.error || "Failed to send message.");
+      }
+    } catch (error) {
+      console.error(error);
+      setErrorMessage("An error occurred. Please try again.");
     }
   };
 
   return (
     <div>
       <main className="main-content2">
+        {/* Cover Section */}
         <div className="image-container2">
           <img src={Roof} alt="Roofing" className="page2img2" />
           <div className="overlay-text2">
@@ -90,6 +70,8 @@ const RoofPage = () => {
             <button className="quote-button2" onClick={openModal}>Get a Free Quote</button>
           </div>
         </div>
+
+        {/* About Section */}
         <div className="aboutp2" id="about2">
           <div className="paragrapgp2">
             <p>If you're looking to improve the safety and appearance of your home, our roofing construction service is the ideal solution. Our roofs are designed to withstand harsh weather conditions and provide long-lasting protection.</p>
@@ -98,25 +80,25 @@ const RoofPage = () => {
             <p>Investing in a new roof or maintaining your existing one is a smart choice for homeowners looking to enhance their property's value and curb appeal. Contact us today to learn more about our roofing construction services and how we can help you achieve the perfect roof for your home.</p>
           </div>
         </div>
-        <div id="reviews"> 
-          <Reviews /> 
-          </div>
-          <div id="book"> 
-          <Book /> 
-          </div>
+
+        {/* Reviews and Booking */}
+        <div id="reviews"><Reviews /></div>
+        <div id="book"><Book /></div>
+
+        {/* Modal Form */}
         {modalOpen && (
           <div className="modal" onClick={closeModal}>
             <div className="modal-content" onClick={(e) => e.stopPropagation()}>
               <span className="close" onClick={closeModal}>&times;</span>
               <h2>Send us a text</h2>
               <form className="quote-form" onSubmit={handleSubmit}>
-              <div className="form-row">
+                <div className="form-row">
                   <div className="form-group">
-                    <label htmlFor="fullName">Full Name</label>
+                    <label htmlFor="fullName">Full Name *</label>
                     <input type="text" id="fullName" name="fullName" />
                   </div>
                   <div className="form-group">
-                    <label htmlFor="phoneNumber">Phone Number</label>
+                    <label htmlFor="phoneNumber">Phone Number *</label>
                     <input type="text" id="phoneNumber" name="phoneNumber" />
                   </div>
                 </div>
@@ -137,38 +119,12 @@ const RoofPage = () => {
                 <div className="form-row full-width">
                   <label>Services:</label>
                   <div className="checkbox-group">
-                    <div className="checkbox">
-                      <label htmlFor="service1">Carports</label>
-                      <input type="checkbox" id="service1" name="service1" value="Carports" />
-                    </div>
-                    <div className="checkbox">
-                      <label htmlFor="service2">Shops</label>
-                      <input type="checkbox" id="service2" name="service2" value="Shops" />
-                    </div>
-                    <div className="checkbox">
-                      <label htmlFor="service3">Barndominiums</label>
-                      <input type="checkbox" id="service3" name="service3" value="Barndominiums" />
-                    </div>
-                    <div className="checkbox">
-                      <label htmlFor="service4">Roofing</label>
-                      <input type="checkbox" id="service4" name="service4" value="Roofing" />
-                    </div>
-                    <div className="checkbox">
-                      <label htmlFor="service5">Siding</label>
-                      <input type="checkbox" id="service5" name="service5" value="Siding" />
-                    </div>
-                    <div className="checkbox">
-                      <label htmlFor="service6">Windows</label>
-                      <input type="checkbox" id="service6" name="service6" value="Windows" />
-                    </div>
-                    <div className="checkbox">
-                      <label htmlFor="service7">Welding</label>
-                      <input type="checkbox" id="service7" name="service7" value="Welding" />
-                    </div>
-                    <div className="checkbox">
-                      <label htmlFor="service8">Fencing</label>
-                      <input type="checkbox" id="service8" name="service8" value="Fencing" />
-                    </div>
+                    {["Carports","Shops","Barndominiums","Roofing","Siding","Windows","Welding","Fencing"].map((service, i) => (
+                      <div className="checkbox" key={i}>
+                        <label htmlFor={`service${i+1}`}>{service}</label>
+                        <input type="checkbox" id={`service${i+1}`} name={`service${i+1}`} value={service} />
+                      </div>
+                    ))}
                   </div>
                 </div>
                 <div className="form-row full-width">
@@ -178,34 +134,16 @@ const RoofPage = () => {
                 <div className="form-row">
                   <button type="submit">Send</button>
                 </div>
+                {errMessage && <div className="error-text">{errMessage}</div>}
+                {formSubmitted && <div className="success-text">Message sent successfully!</div>}
               </form>
-              {errMessage && (
-                <div className="error-text">{errMessage}</div>
-              )}
-              {formSubmitted && (
-                <div className="success-text">Message sent successfully!</div>
-              )}
             </div>
           </div>
         )}
       </main>
-      <div id="contact"> 
-          <Footer /> 
-          </div>     
-      </div>
+      <div id="contact"><Footer /></div>
+    </div>
   );
 };
 
 export default RoofPage;
-
-
-
-
-
-
-
-
-
-
-
-
