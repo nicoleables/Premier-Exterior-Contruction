@@ -4,8 +4,6 @@ import "../styles/global.css";
 import "../styles/reviews.css";
 import reviewimg from "../assets/reviews/images/reviewimg.jpg";
 import facebook from "../assets/footer/images/footerfacebooklogo.png";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faArrowLeft, faArrowRight } from "@fortawesome/free-solid-svg-icons";
 
 const Reviews = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -72,7 +70,7 @@ const Reviews = () => {
 
       <div className="review-slides">
   <button className="arrow left-arrow" onClick={prevSlide}>
-    <FontAwesomeIcon icon={faArrowLeft} />
+    &larr;
   </button>
 
   <div
@@ -86,7 +84,7 @@ const Reviews = () => {
   </div>
 
   <button className="arrow right-arrow" onClick={nextSlide}>
-    <FontAwesomeIcon icon={faArrowRight} />
+    &rarr;
   </button>
 </div>
 
